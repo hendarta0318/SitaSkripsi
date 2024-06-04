@@ -29,10 +29,13 @@
 					<div class="d-table-cell align-middle">
 
 						<div class="text-center mt-4">
-							<h1 class="h2">Welcome back!</h1>
-							<p class="lead">
-								Sign in to your account to continue
-							</p>
+							<h1 class="h2">SITA</h1>
+							<h5 class="lead">
+								Sistem Informasi Tugas Akhir
+							</h5>
+							<h6 class="lead">
+								Fakultas Ilmu Komputer
+							</h6>
 						</div>
 
 						<div class="card">
@@ -66,9 +69,6 @@
 									</form>
 								</div>
 							</div>
-						</div>
-						<div class="text-center mb-3">
-							Don't have an account? <a href="pages-sign-up.html">Sign up</a>
 						</div>
 					</div>
 				</div>

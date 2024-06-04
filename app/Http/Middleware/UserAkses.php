@@ -18,6 +18,5 @@ class UserAkses
         if (auth()->user()->role == $role) {
             return $next($request);
         }
-        return redirect('');
     }
 }
