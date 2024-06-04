@@ -7,7 +7,7 @@
 		<div class="col-lg-12">
 			<div class="card" style="height: 50px;">
 				<div class="card-header">
-					<h5 class="card-title mb-0">Halo Nama Dosen Selamat datang di SITA ILKOM</h5>
+					<h5 class="card-title mb-0">Halo {{ Auth::user()->name }} Selamat datang di SITA ILKOM</h5>
 				</div>
 			</div>
 		</div>

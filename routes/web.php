@@ -2,21 +2,32 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardMahasiswaController;
+use App\Http\Middleware\RedirectIfAuthenticated;
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::middleware(['guest'])-> group(function(){
+    Route::get('/', [LoginController::class, 'showLoginForm'])->name('login'); // login
+    Route::post('/', [LoginController::class, 'login']);
 });
 
-// login
-Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('login', [LoginController::class, 'login']);
-// register
-Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-Route::post('register', [RegisterController::class, 'register']);
+Route::middleware(['auth'])-> group(function(){
+    Route::get('logout',[LoginController::class, 'logout']);
+    Route::get('dashboard_mahasiswa', [DashboardMahasiswaController::class, 'showDashboardMhsForm'])->name('dashboard_mahasiswa');
+});
 
-Route::get('dashboard_mahasiswa', function () {
-    return view('dashboard_mahasiswa');
-})->name('dashboard_mahasiswa');
+// register
+// Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+// Route::post('register', [RegisterController::class, 'register']);
+
+
+
+// Route::get('dashboard_mahasiswa', function () {
+//     return view('dashboard_mahasiswa');
+// })->name('dashboard_mahasiswa');
 
 Route::get('dashboard_dosen', function () {
     return view('dashboard_dosen');

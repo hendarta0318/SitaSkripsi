@@ -11,7 +11,7 @@
 						<div class="col-lg-12">
 							<div class="card" style="height: 40px;">
 								<div class="card-header">
-									<h5 class="card-title mb-0">Halo Nama Mahasiswa Selamat datang di SITA ILKOM</h5>
+									<h5 class="card-title mb-0">Halo {{ Auth::user()->name }} Selamat datang di SITA ILKOM</h5>
 								</div>
 							</div>
 						</div>
@@ -21,7 +21,7 @@
 						<div class="col-md-3">
 							<div class="card">
 								<div class="card-header bg-primary">
-									<h5 class="card-title mb-0 text-dark">Total Sedang Skripsi</h5>
+									<h5 class="card-title mb-0 text-dark">Total Skripsi</h5>
 									<h2 class="card-title-mb-0" style="font-size: 40px; display: inline-block;"><b>0</b></h2>
 									<h5 class="card-title-mb-0" style="font-size: 18px; display: inline-block; margin-left: 8px;">Mahasiswa</h5>
 								</div>

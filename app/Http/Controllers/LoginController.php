@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+// use Illuminate\Http\RedirectResponse::$withInput
 
 class LoginController extends Controller
 {
@@ -12,14 +14,32 @@ class LoginController extends Controller
     }
     public function login(Request $request)
     {
-        // $credentials = $request->only('email', 'password');
+        $request-> validate([
+            'email'=> 'required',
+            'password'=> 'required',
+        ],[
+            'email.required'=>'Email Wajib Di Isi',
+            'password.required'=>'Password Wajib Di Isi',
+        ]);
 
-        // if (Auth::attempt($credentials)) {
-        //     return redirect()->intended('dashboard_mahasiswa'); // Sesuaikan redirect sesuai kebutuhan
-        // }
+        $infologin = [
+             'email' => $request->email,
+             'password' => $request->password,
+        ];
 
-        // return back()->withErrors([
-        //     'email' => 'The provided credentials do not match our records.',
-        // ]);
+        if (Auth::attempt($infologin)){
+            return redirect('dashboard_mahasiswa'); 
+        }else{
+            return redirect('')->withErrors(
+                'Username dan Password yang dimasukkan tidak sesuai'
+            )->withInput();
+        }
+    }
+
+    // Metode logout
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return redirect('');
     }
 }
