@@ -28,7 +28,12 @@ class LoginController extends Controller
         ];
 
         if (Auth::attempt($infologin)){
-            return redirect('dashboard_mahasiswa'); 
+            if(Auth::user()->role == 'mahasiswa'){
+                return redirect('dashboard_mahasiswa');
+            }
+            elseif(Auth::user()->role == 'dosen'){
+                return redirect('dashboard_dosen');
+            }
         }else{
             return redirect('')->withErrors(
                 'Username dan Password yang dimasukkan tidak sesuai'

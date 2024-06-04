@@ -15,8 +15,9 @@ Route::middleware(['guest'])-> group(function(){
 });
 
 Route::middleware(['auth'])-> group(function(){
+    Route::get('dashboard_mahasiswa', [DashboardMahasiswaController::class, 'showDashboardMhsForm'])->name('dashboard_mahasiswa')->middleware('userAkses:mahasiswa');
+    Route::get('dashboard_dosen', [DashboardDosenController::class, 'showDashboardDosenForm'])->name('dashboard_dosen')->middleware('userAkses:dosen');
     Route::get('logout',[LoginController::class, 'logout']);
-    Route::get('dashboard_mahasiswa', [DashboardMahasiswaController::class, 'showDashboardMhsForm'])->name('dashboard_mahasiswa');
 });
 
 // register
