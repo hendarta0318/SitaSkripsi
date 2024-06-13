@@ -4,6 +4,7 @@ use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardMahasiswaController;
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Http\Controllers\UsulanPembimbingController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -15,9 +16,12 @@ Route::middleware(['guest'])-> group(function(){
 });
 
 Route::middleware(['auth'])-> group(function(){
-    Route::get('dashboard_mahasiswa', [DashboardMahasiswaController::class, 'showDashboardMhsForm'])->name('dashboard_mahasiswa')->middleware('userAkses:mahasiswa');
+    Route::get('dashboard_mahasiswa', [DashboardMahasiswaController::class, 'showDashboardMhsForm'])->name('dashboard_mahasiswa');
     Route::get('dashboard_dosen', [DashboardDosenController::class, 'showDashboardDosenForm'])->name('dashboard_dosen')->middleware('userAkses:dosen');
     Route::get('logout',[LoginController::class, 'logout']);
+
+    Route::post('usulan-pembimbing', [UsulanPembimbingController::class, 'store'])->name('usulan-pembimbing.store');
+    
 });
 
 // register
@@ -29,6 +33,8 @@ Route::middleware(['auth'])-> group(function(){
 // Route::get('dashboard_mahasiswa', function () {
 //     return view('dashboard_mahasiswa');
 // })->name('dashboard_mahasiswa');
+
+Route::get('usulan_pembimbing', function () {return view('usulan_pembimbing');})->name('usulan_pembimbing');
 
 Route::get('dashboard_dosen', function () {
     return view('dashboard_dosen');
@@ -62,6 +68,3 @@ Route::get('topik_penawaran_mahasiswa', function () {
     return view('topik_penawaran_mahasiswa');
 })->name('topik_penawaran_mahasiswa');
 
-Route::get('usulan_pembimbing', function () {
-    return view('usulan_pembimbing');
-})->name('usulan_pembimbing');
