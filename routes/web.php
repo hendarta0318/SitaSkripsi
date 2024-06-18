@@ -6,6 +6,8 @@ use App\Http\Controllers\DashboardMahasiswaController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\UsulanPembimbingController;
 use App\Http\Controllers\SuratTugasController;
+use App\Http\Controllers\SeminarProposalController;
+use App\Http\Controllers\SidangSkripsiController;
 
 Route::middleware(['guest'])-> group(function(){
     Route::get('/', [LoginController::class, 'showLoginForm'])->name('login'); // login
@@ -23,9 +25,11 @@ Route::middleware(['auth'])-> group(function(){
     Route::get('repository', [RepositoryController::class, 'showUsulanPembimbingForm'])->name('repository');
     Route::get('repository_dosen', [RepositoryController::class, 'showUsulanPembimbingForm'])->name('repository_dosen');
 
-    Route::get('seminar_proposal', [SeminarProposalController::class, 'showUsulanPembimbingForm'])->name('seminar_proposal');
+    Route::post('seminar_proposal', [SeminarProposalController::class, 'store'])->name('seminar-proposal.store');
+    Route::get('seminar_proposal', [SeminarProposalController::class, 'showSeminarProposalForm'])->name('seminar_proposal');
 
-    Route::get('sidang_skripsi', [SidangSkripsiController::class, 'showUsulanPembimbingForm'])->name('sidang_skripsi');
+    Route::post('sidang_skripsi', [SidangSkripsiController::class, 'store'])->name('sidang_skripsi.store');
+    Route::get('sidang_skripsi', [SidangSkripsiController::class, 'showSidangSkripsiForm'])->name('sidang_skripsi');
 
     Route::post('surat_tugas', [SuratTugasController::class, 'store'])->name('surat_tugas.store');
     Route::get('surat_tugas', [SuratTugasController::class, 'showSuratTugasForm'])->name('surat_tugas');
@@ -38,7 +42,3 @@ Route::middleware(['auth'])-> group(function(){
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
-// register
-// Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-// Route::post('register', [RegisterController::class, 'register']);
