@@ -4,14 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\UsulanPembimbing;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class UsulanPembimbingController extends Controller
 {
+    public function showUsulanPembimbingForm()
+    {
+        return view('usulan_pembimbing');
+    }
     public function store(Request $request)
     {
-        // Validasi inputan user
-        $request->validate([
-            'nim' => 'required|string|max:255',
+        $validate = Validator::make ($request->all(),[
+           'nim' => 'required|string|max:255',
             'nama' => 'required|string|max:255',
             'judul' => 'required|string|max:255',
             'rumusan_masalah' => 'required|string',
@@ -25,13 +30,14 @@ class UsulanPembimbingController extends Controller
             'no_wa' => 'required|string|max:255',
         ]);
 
-        // Simpan file
-        $drafProposalPath = $request->file('draf_proposal')->store('proposals');
-        $krsBerjalanPath = $request->file('krs_berjalan')->store('krs');
-        $formPersetujuanPath = $request->file('form_persetujuan')->store('persetujuan');
+        if($validate->fails()) return redirect()->back()->withInput()->withErrors($validate);
+
+         $drafProposalPath = $request->file('draf_proposal')->store('usulan_pembimbing');
+        $krsBerjalanPath = $request->file('krs_berjalan')->store('usulan_pembimbing');
+        $formPersetujuanPath = $request->file('form_persetujuan')->store('usulan_pembimbing');
 
         // Buat data baru di database
-        UsulanPembimbing::create([
+         UsulanPembimbing::create([
             'nim' => $request->nim,
             'nama' => $request->nama,
             'judul' => $request->judul,
@@ -46,7 +52,6 @@ class UsulanPembimbingController extends Controller
             'no_wa' => $request->no_wa,
         ]);
 
-        // Redirect atau response sesuai kebutuhan
-        return redirect()->back()->with('success', 'Usulan pembimbing berhasil disimpan.');
+        return redirect()->route('dashboard_mahasiswa');
     }
 }

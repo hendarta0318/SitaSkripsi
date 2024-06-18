@@ -8,10 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class UsulanPembimbing extends Model
 {
     use HasFactory;
-     // Nama tabel yang digunakan oleh model ini
-    protected $table = 'usulan_pembimbings';
 
-    // Kolom-kolom yang bisa diisi secara massal
+     protected $table = 'usulan_pembimbing';
+
     protected $fillable = [
         'nim',
         'nama',

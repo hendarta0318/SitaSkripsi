@@ -5,10 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardMahasiswaController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\UsulanPembimbingController;
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+use App\Http\Controllers\SuratTugasController;
 
 Route::middleware(['guest'])-> group(function(){
     Route::get('/', [LoginController::class, 'showLoginForm'])->name('login'); // login
@@ -21,50 +18,27 @@ Route::middleware(['auth'])-> group(function(){
     Route::get('logout',[LoginController::class, 'logout']);
 
     Route::post('usulan-pembimbing', [UsulanPembimbingController::class, 'store'])->name('usulan-pembimbing.store');
+    Route::get('usulan_pembimbing', [UsulanPembimbingController::class, 'showUsulanPembimbingForm'])->name('usulan_pembimbing');
     
+    Route::get('repository', [RepositoryController::class, 'showUsulanPembimbingForm'])->name('repository');
+    Route::get('repository_dosen', [RepositoryController::class, 'showUsulanPembimbingForm'])->name('repository_dosen');
+
+    Route::get('seminar_proposal', [SeminarProposalController::class, 'showUsulanPembimbingForm'])->name('seminar_proposal');
+
+    Route::get('sidang_skripsi', [SidangSkripsiController::class, 'showUsulanPembimbingForm'])->name('sidang_skripsi');
+
+    Route::post('surat_tugas', [SuratTugasController::class, 'store'])->name('surat_tugas.store');
+    Route::get('surat_tugas', [SuratTugasController::class, 'showSuratTugasForm'])->name('surat_tugas');
+
+    Route::get('topik_penawaran_mahasiswa', [TopikPenawaranMahasiswaController::class, 'showTopikPenawaranMahasiswaForm'])->name('topik_penawaran_mahasiswa');
+
+    Route::get('topik_penawaran_dosen', [TopikPenawaranDosenController::class, 'showTopikPenawaranDosenForm'])->name('topik_penawaran_dosen');
 });
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // register
 // Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 // Route::post('register', [RegisterController::class, 'register']);
-
-
-
-// Route::get('dashboard_mahasiswa', function () {
-//     return view('dashboard_mahasiswa');
-// })->name('dashboard_mahasiswa');
-
-Route::get('usulan_pembimbing', function () {return view('usulan_pembimbing');})->name('usulan_pembimbing');
-
-Route::get('dashboard_dosen', function () {
-    return view('dashboard_dosen');
-})->name('dashboard_dosen');
-
-Route::get('repository', function () {
-    return view('repository');
-})->name('repository');
-
-Route::get('repository_dosen', function () {
-    return view('repository_dosen');
-})->name('repository_dosen');
-
-Route::get('seminar_proposal', function () {
-    return view('seminar_proposal');
-})->name('seminar_proposal');
-
-Route::get('sidang_skripsi', function () {
-    return view('sidang_skripsi');
-})->name('sidang_skripsi');
-
-Route::get('surat_tugas', function () {
-    return view('surat_tugas');
-})->name('surat_tugas');
-
-Route::get('topik_penawaran_dosen', function () {
-    return view('topik_penawaran_dosen');
-})->name('topik_penawaran_dosen');
-
-Route::get('topik_penawaran_mahasiswa', function () {
-    return view('topik_penawaran_mahasiswa');
-})->name('topik_penawaran_mahasiswa');
-
