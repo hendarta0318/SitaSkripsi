@@ -13,6 +13,16 @@
 	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-blank.html" />
+	<link rel="canonical" href="https://demo-basic.adminkit.io/icons-feather.html" />
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 
 	<title>Sita Fasilkom</title>
 
@@ -276,13 +286,30 @@
     //     modal.style.display = "none";
     // }
 
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
     }
 	</script>
+
+	<!-- inisiasi kalender -->
+	<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            flatpickr("#datetimepicker-dashboard", {
+                // Konfigurasi Flatpickr
+                inline: true,
+                dateFormat: "Y-m-d H:i",
+            });
+        });
+    </script>
+	
+	<!-- inisiasi tabel -->
+	<script>
+        $(document).ready(function() {
+            $('#datatables-reponsive').DataTable();
+        });
+    </script>
 
 </body>
 

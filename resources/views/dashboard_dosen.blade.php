@@ -51,23 +51,7 @@
 					<div id="datatables-reponsive_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
 						<div class="row mb-2">
 							<div class="col-sm-12 col-md-6">
-								<div class="dataTables_length" id="datatables-reponsive_length">
-									<label class="d-flex align-items-center">
-										Show
-										<select name="datatables-reponsive_length" aria-controls="datatables-reponsive" class="form-select form-select-sm mx-2" style="margin-left: 5px; margin-right: 5px; width: 75px;">
-											<option value="10">10</option>
-											<option value="25">25</option>
-											<option value="50">50</option>
-											<option value="100">100</option>
-										</select>
-										entries
-									</label>
-								</div>
-							</div>
-							<div class="col-sm-12 col-md-6">
-								<div id="datatables-reponsive_filter" class="dataTables_filter">
-									<input type="search" class="form-control form-control-sm" placeholder="Cari" aria-controls="datatables-reponsive" style="margin-left: 150px; width: 75%;" />
-								</div>
+								<div class="dataTables_length" id="datatables-reponsive_length"></div>
 							</div>
 						</div>
 						<div class="row dt-row">
@@ -75,18 +59,7 @@
 								<table id="datatables-reponsive" class="table table-striped dataTable no-footer dtr-inline" style="width: 100%;" aria-describedby="datatables-reponsive_info">
 									<thead style="background-color: #7239EA;">
 										<tr>
-											<th
-												class="sorting sorting_asc text-light"
-												tabindex="0"
-												aria-controls="datatables-reponsive"
-												rowspan="1"
-												colspan="1"
-												style="width: 15px;"
-												aria-label="No: activate to sort column descending"
-												aria-sort="ascending"
-											>
-												No
-											</th>
+											<th class="sorting sorting_asc text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 15px;" aria-label="No: activate to sort column descending" aria-sort="ascending">No</th>
 											<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 120px;" aria-label="Nim: activate to sort column ascending">Nim</th>
 											<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 175px;" aria-label="Nama Mahasiswa: activate to sort column ascending">Nama Mahasiswa</th>
 											<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 175px;" aria-label="Nama Dosen Pembimbing: activate to sort column ascending">Nama Dosen Pembimbing</th>
@@ -103,35 +76,13 @@
 											<td>Pengaruh kepuasan pe...</td>
 											<td class="table-action">
 												<a href="#">
-													<svg
-														xmlns="http://www.w3.org/2000/svg"
-														viewBox="0 0 24 24"
-														width="24"
-														height="24"
-														class="main-grid-item-icon"
-														fill="none"
-														stroke="currentColor"
-														stroke-linecap="round"
-														stroke-linejoin="round"
-														stroke-width="2"
-													>
-														<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+														<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
 														<polyline points="13 2 13 9 20 9" />
 													</svg>
 												</a>
 												<a href="#">
-													<svg
-														xmlns="http://www.w3.org/2000/svg"
-														viewBox="0 0 24 24"
-														width="24"
-														height="24"
-														class="main-grid-item-icon"
-														fill="none"
-														stroke="currentColor"
-														stroke-linecap="round"
-														stroke-linejoin="round"
-														stroke-width="2"
-													>
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
 														<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
 														<polyline points="14 2 14 8 20 8" />
 														<line x1="16" x2="8" y1="13" y2="13" />
@@ -149,35 +100,13 @@
 											<td>Pengaruh kepuasan pe...</td>
 											<td class="table-action">
 												<a href="#">
-													<svg
-														xmlns="http://www.w3.org/2000/svg"
-														viewBox="0 0 24 24"
-														width="24"
-														height="24"
-														class="main-grid-item-icon"
-														fill="none"
-														stroke="currentColor"
-														stroke-linecap="round"
-														stroke-linejoin="round"
-														stroke-width="2"
-													>
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
 														<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
 														<polyline points="13 2 13 9 20 9" />
 													</svg>
 												</a>
 												<a href="#">
-													<svg
-														xmlns="http://www.w3.org/2000/svg"
-														viewBox="0 0 24 24"
-														width="24"
-														height="24"
-														class="main-grid-item-icon"
-														fill="none"
-														stroke="currentColor"
-														stroke-linecap="round"
-														stroke-linejoin="round"
-														stroke-width="2"
-													>
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
 														<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
 														<polyline points="14 2 14 8 20 8" />
 														<line x1="16" x2="8" y1="13" y2="13" />
@@ -191,42 +120,6 @@
 								</table>
 							</div>
 						</div>
-
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6">
-                                <div class="dataTables_info" id="datatables-reponsive_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <div class="dataTables_paginate paging_simple_numbers" id="datatables-reponsive_paginate">
-                                    <ul class="pagination">
-                                        <li class="paginate_button page-item previous disabled" id="datatables-reponsive_previous">
-                                            <a aria-controls="datatables-reponsive" aria-disabled="true" aria-role="link" data-dt-idx="previous" tabindex="0" class="page-link">Previous</a>
-                                        </li>
-                                        <li class="paginate_button page-item active">
-                                            <a href="#" aria-controls="datatables-reponsive" aria-role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link">1</a>
-                                        </li>
-                                        <li class="paginate_button page-item">
-                                            <a href="#" aria-controls="datatables-reponsive" aria-role="link" data-dt-idx="1" tabindex="0" class="page-link">2</a>
-                                        </li>
-                                        <li class="paginate_button page-item">
-                                            <a href="#" aria-controls="datatables-reponsive" aria-role="link" data-dt-idx="2" tabindex="0" class="page-link">3</a>
-                                        </li>
-                                        <li class="paginate_button page-item">
-                                            <a href="#" aria-controls="datatables-reponsive" aria-role="link" data-dt-idx="3" tabindex="0" class="page-link">4</a>
-                                        </li>
-                                        <li class="paginate_button page-item">
-                                            <a href="#" aria-controls="datatables-reponsive" aria-role="link" data-dt-idx="4" tabindex="0" class="page-link">5</a>
-                                        </li>
-                                        <li class="paginate_button page-item">
-                                            <a href="#" aria-controls="datatables-reponsive" aria-role="link" data-dt-idx="5" tabindex="0" class="page-link">6</a>
-                                        </li>
-                                        <li class="paginate_button page-item next" id="datatables-reponsive_next">
-                                            <a href="#" aria-controls="datatables-reponsive" aria-role="link" data-dt-idx="next" tabindex="0" class="page-link">Next</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
 					</div>
 				</div>
 			</div>
