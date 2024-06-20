@@ -8,7 +8,7 @@
         <div class="mb-3 row">
             <label for="inputNIM" class="col-sm-2 col-form-label">NIM</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputNIM" name="nim">
+                <input type="text" class="form-control" id="inputNIM" name="nim"autocomplete="off">
                 @error('nim')
                     <small>{{$message}}</small>
                 @enderror
@@ -18,7 +18,7 @@
         <div class="mb-3 row">
             <label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputNama"name="nama">
+                <input type="text" class="form-control" id="inputNama"name="nama"autocomplete="off">
                 @error('nama')
                     <small>{{$message}}</small>
                 @enderror
@@ -28,7 +28,7 @@
         <div class="mb-3 row">
             <label for="inputJudul" class="col-sm-2 col-form-label">Judul *</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputJudul" name="judul">
+                <input type="text" class="form-control" id="inputJudul" name="judul"autocomplete="off">
                 @error('judul')
                     <small>{{$message}}</small>
                 @enderror
@@ -38,7 +38,7 @@
         <div class="mb-3 row">
             <label for="floatingTextarea" class="col-sm-2 col-form-label">Rumusan Masalah *</label>
             <div class="col-sm-10">
-                <textarea class="form-control" id="floatingTextarea" style="height: 100px" name="rumusan_masalah"></textarea>
+                <textarea class="form-control" id="floatingTextarea" style="height: 100px" name="rumusan_masalah" autocomplete="off"></textarea>
                 @error('rumusan_masalah')
                     <small>{{$message}}</small>
                 @enderror
@@ -80,9 +80,9 @@
             <div class="col-sm-10">
                 <select class="form-select" aria-label="Default select example" id="dosen_pembimbing1" name="dosen_pembimbing1">
                     <option selected>-</option>
-                    <option value="Dr. Jane Smith">Dr. Jane Smith</option>
-                    <option value="Prof. John Brown">Prof. John Brown</option>
-                    <option value="Dr. Emily White">Dr. Emily White</option>
+                    <option value="Dr. Rico">Dr. Rico</option>
+                    <option value="Prof. Lucky">Prof. Lucky</option>
+                    <option value="Dr. Emely">Dr. Emely</option>
                 </select>
                 @error('dosen_pembimbing1')
                     <small>{{ $message }}</small>
@@ -95,9 +95,9 @@
             <div class="col-sm-10">
                 <select class="form-select" aria-label="Default select example" id="dosen_pembimbing2" name="dosen_pembimbing2">
                     <option selected>-</option>
-                    <option value="Dr. Jane Smith">Dr. Jane Smith</option>
-                    <option value="Prof. John Brown">Prof. John Brown</option>
-                    <option value="Dr. Emily White">Dr. Emily White</option>
+                    <option value="Dr. Rico">Dr. Rico</option>
+                    <option value="Prof. Lucky">Prof. Lucky</option>
+                    <option value="Dr. Emely">Dr. Emely</option>
                 </select>
                 @error('dosen_pembimbing2')
                     <small>{{$message}}</small>
@@ -119,7 +119,7 @@
         <div class="mb-3 row">
             <label for="inputNoWA" class="col-sm-2 col-form-label">No. WA Aktif *</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputNoWA"name="no_wa">
+                <input type="text" class="form-control" id="inputNoWA"name="no_wa"autocomplete="off">
                 @error('no_wa')
                     <small>{{$message}}</small>
                 @enderror

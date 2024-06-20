@@ -17,7 +17,7 @@
 						</div>
 					</div>
 
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-md-3">
 							<div class="card">
 								<div class="card-header bg-primary">
@@ -57,7 +57,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<h1 class="h3 mb-3"><b>Daftar Mahasiswa Menempuh Skripsi</b></h1>
 
@@ -104,94 +104,24 @@
 															No
 														</th>
 														<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 145px;" aria-label="Nim: activate to sort column ascending">Nim</th>
-														<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 200px;" aria-label="Nama Mahasiswa: activate to sort column ascending">
-															Nama Mahasiswa
-														</th>
-														<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 150px;" aria-label="Status: activate to sort column ascending">Status</th>
+														<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 200px;" aria-label="Nama Mahasiswa: activate to sort column ascending">Nama Mahasiswa</th>
 														<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 130px;" aria-label="Judul: activate to sort column ascending">Judul</th>
-														<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 63px;" aria-label="Salary: activate to sort column ascending">Salary</th>
+														<!-- <th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 63px;" aria-label="Salary: activate to sort column ascending">Salary</th> -->
 													</tr>
 												</thead>
 												<tbody>
 													<tr class="odd">
 														<td class="dtr-control sorting_1" tabindex="0">1</td>
 														<td>212410103030</td>
-														<td>Brenden Wagner</td>
-														<td>Menempuh Skripsi</td>
+														<td>M.Nurohman</td>
 														<td>Pengaruh kepuasan pe...</td>
-														<td class="" style="">$162,700</td>
 													</tr>
 													<tr class="even">
 														<td class="dtr-control sorting_1" tabindex="0">2</td>
-														<td>Chief Executive Officer (CEO)</td>
-														<td>London</td>
-														<td>47</td>
-														<td class="" style="">2019/10/09</td>
-														<td class="" style="">$1,200,000</td>
-													</tr>
-													<tr class="odd">
-														<td class="dtr-control sorting_1" tabindex="0">3</td>
-														<td>Junior Technical Author</td>
-														<td>San Francisco</td>
-														<td>66</td>
-														<td class="" style="">2019/01/12</td>
-														<td class="" style="">$86,000</td>
-													</tr>
-													<tr class="even">
-														<td class="dtr-control sorting_1" tabindex="0">4</td>
-														<td>Software Engineer</td>
-														<td>London</td>
-														<td>41</td>
-														<td class="" style="">2022/10/13</td>
-														<td class="" style="">$132,000</td>
-													</tr>
-													<tr class="odd">
-														<td class="dtr-control sorting_1" tabindex="0">5</td>
-														<td>Software Engineer</td>
-														<td>San Francisco</td>
-														<td>28</td>
-														<td class="" style="">2023/06/07</td>
-														<td class="" style="">$206,850</td>
-													</tr>
-													<tr class="even">
-														<td class="dtr-control sorting_1" tabindex="0">6</td>
-														<td>Integration Specialist</td>
-														<td>New York</td>
-														<td>61</td>
-														<td class="" style="">2022/12/02</td>
-														<td class="" style="">$372,000</td>
-													</tr>
-													<tr class="odd">
-														<td class="dtr-control sorting_1" tabindex="0">7</td>
-														<td>Software Engineer</td>
-														<td>London</td>
-														<td>38</td>
-														<td class="" style="">2023/05/03</td>
-														<td class="" style="">$163,500</td>
-													</tr>
-													<tr class="even">
-														<td class="dtr-control sorting_1" tabindex="0">8</td>
-														<td>Pre-Sales Support</td>
-														<td>New York</td>
-														<td>21</td>
-														<td class="" style="">2023/12/12</td>
-														<td class="" style="">$106,450</td>
-													</tr>
-													<tr class="odd">
-														<td class="dtr-control sorting_1" tabindex="0">9</td>
-														<td>Sales Assistant</td>
-														<td>New York</td>
-														<td>46</td>
-														<td class="" style="">2023/12/06</td>
-														<td class="" style="">$145,600</td>
-													</tr>
-													<tr class="even">
-														<td class="dtr-control sorting_1" tabindex="0">10</td>
-														<td>Senior Javascript Developer</td>
-														<td>Edinburgh</td>
-														<td>22</td>
-														<td class="" style="">2022/03/29</td>
-														<td class="" style="">$433,060</td>
+														<td>212410103031</td>
+														<td>Fathur</td>
+														<td>Pengaruh kepuasan pe...</td>
+														<!-- <td class="" style="">$1,200,000</td> -->
 													</tr>
 												</tbody>
 											</table>

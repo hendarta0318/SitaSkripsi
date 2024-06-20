@@ -39,13 +39,13 @@
                                 class="modalLink" 
                                 data-content="DOSEN / PENELITI
 
-                                1.Priza Pandunata
-                                2.Nelly Oktavia Adiwijaya
-                                3.Fajrin Nurman Arifin
-                                4.Diah Ayu Retnani Wulandari
-                                5.Muhamad Arief Hidayat
-                                6.Gayatri Dwi Santika
-                                7.Qurrota A’yuni Ar Ruhimat">
+                                1.Priza Pandunata S.Kom, M.Sc
+                                2.Nelly Oktavia Adiwijaya S.Si, M.Kom
+                                3.Fajrin Nurman Arifin S.T., M.Eng
+                                4.Diah Ayu Retnani Wulandari S.T., M.Eng
+                                5.Muhamad Arief Hidayat S.Kom, M.Kom
+                                6.Gayatri Dwi Santika S.SI, M.Kom
+                                7.Qurrota A’yuni Ar Ruhimat S.Pd., M.Sc     ">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                         <circle cx="9" cy="7" r="4" />
@@ -88,10 +88,10 @@
                                     class="modalLink" 
                                     data-content="DOSEN / PENELITI
 
-                                    1. Tio Dharmawan
-                                    2. Priza Pandunata
-                                    3. Achmad Maududie
-                                    4. Muhamad Arief Hidayat
+                                    1. Tio Dharmawan S.Kom, M.Kom
+                                    2. Priza Pandunata S.Kom, M.Sc
+                                    3. Achmad Maududie ST., M.Kom
+                                    4. Muhamad Arief Hidayat S.Kom, M.Kom
                                     5. Harry Soepandi">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -252,15 +252,15 @@
                                     data-content="DOSEN / PENELITI
                                     
                                     1. Yudha Alif Auliya S.Kom, M.Kom
-                                    2. Priza Pandunata
-                                    3. Achmad Maududie
+                                    2. Priza Pandunata S.Kom, M.Sc
+                                    3. Achmad Maududie ST., M.Kom
                                     4. Nelly Oktavia Adiwijaya, S.Si., M.T.
                                     5. Saiful Bukhori
                                     6. Gama Wisnu Fajarianto, S.Kom., M.Kom
                                     7. Dr. Dwiretno Istiyadi Swasono, ST.,M.Kom
                                     8. Nova El Maidah
                                     9. Muhammad 'Ariful Furqon, S.Pd., M.Kom.
-                                    10. Muhamad Arief Hidayat
+                                    10. Muhamad Arief Hidayat S.Kom, M.Kom
                                     11. Gayatri Dwi Santika, S.SI.,M.Kom
                                     12. Qurrota A'yuni Ar Ruhimat">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -333,7 +333,7 @@
                                     data-content="DOSEN / PENELITI
                                     
                                     1. Nova El Maidah
-                                    2. M. Zarkasi">
+                                    2. M. Zarkasi S.Kom., M.Kom.">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                             <circle cx="9" cy="7" r="4" />

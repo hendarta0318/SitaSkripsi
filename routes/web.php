@@ -1,13 +1,17 @@
 <?php
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+// use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardMahasiswaController;
+use App\Http\Controllers\DashboardDosenController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\UsulanPembimbingController;
+use App\Http\Controllers\RepositoryController;
 use App\Http\Controllers\SuratTugasController;
 use App\Http\Controllers\SeminarProposalController;
 use App\Http\Controllers\SidangSkripsiController;
+use App\Http\Controllers\TopikPenawaranMahasiswaController;
+use App\Http\Controllers\TopikPenawaranDosenController;
 
 Route::middleware(['guest'])-> group(function(){
     Route::get('/', [LoginController::class, 'showLoginForm'])->name('login'); // login
@@ -16,14 +20,14 @@ Route::middleware(['guest'])-> group(function(){
 
 Route::middleware(['auth'])-> group(function(){
     Route::get('dashboard_mahasiswa', [DashboardMahasiswaController::class, 'showDashboardMhsForm'])->name('dashboard_mahasiswa');
-    Route::get('dashboard_dosen', [DashboardDosenController::class, 'showDashboardDosenForm'])->name('dashboard_dosen')->middleware('userAkses:dosen');
+    Route::get('dashboard_dosen', [DashboardDosenController::class, 'showDashboardDosenForm'])->name('dashboard_dosen');
     Route::get('logout',[LoginController::class, 'logout']);
 
     Route::post('usulan-pembimbing', [UsulanPembimbingController::class, 'store'])->name('usulan-pembimbing.store');
     Route::get('usulan_pembimbing', [UsulanPembimbingController::class, 'showUsulanPembimbingForm'])->name('usulan_pembimbing');
     
-    Route::get('repository', [RepositoryController::class, 'showUsulanPembimbingForm'])->name('repository');
-    Route::get('repository_dosen', [RepositoryController::class, 'showUsulanPembimbingForm'])->name('repository_dosen');
+    Route::get('repository', [RepositoryController::class, 'showRepositoryForm'])->name('repository');
+    Route::get('repository_dosen', [RepositoryController::class, 'showRepositoryDosenForm'])->name('repository_dosen');
 
     Route::post('seminar_proposal', [SeminarProposalController::class, 'store'])->name('seminar-proposal.store');
     Route::get('seminar_proposal', [SeminarProposalController::class, 'showSeminarProposalForm'])->name('seminar_proposal');
