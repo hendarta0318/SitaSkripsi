@@ -111,8 +111,7 @@
             font-weight: bold;
         }
 
-        .close:hover,
-        .close:focus {
+        .close:hover, .close:focus {
             color: black;
             text-decoration: none;
             cursor: pointer;
@@ -174,16 +173,15 @@
               				<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Surat Tugas</span>
             			</a>
 					</li>
-
+				</ul>
 			</div>
 		</nav>
 
 		<div class="main">
 			<nav class="navbar navbar-expand navbar-light navbar-bg">
 				<a class="sidebar-toggle js-sidebar-toggle">
-          <i class="hamburger align-self-center"></i>
-        </a>
-
+					<i class="hamburger align-self-center"></i>
+				</a>
 				<div class="navbar-collapse collapse">
 					<ul class="navbar-nav navbar-align">
 						<li class="nav-item dropdown">
@@ -254,6 +252,15 @@
 				@yield('content-surat_tugas')
 			</div>
 
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-agenda_seminar_proposal')
+			</div>
+
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-agenda_sidang_skripsi')
+			</div>
 		</div>
 	</div>
 

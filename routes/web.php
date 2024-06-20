@@ -12,6 +12,8 @@ use App\Http\Controllers\SeminarProposalController;
 use App\Http\Controllers\SidangSkripsiController;
 use App\Http\Controllers\TopikPenawaranMahasiswaController;
 use App\Http\Controllers\TopikPenawaranDosenController;
+use App\Http\Controllers\AgendaSeminarProposalController;
+use App\Http\Controllers\AgendaSidangSkripsiController;
 
 Route::middleware(['guest'])-> group(function(){
     Route::get('/', [LoginController::class, 'showLoginForm'])->name('login'); // login
@@ -41,6 +43,10 @@ Route::middleware(['auth'])-> group(function(){
     Route::get('topik_penawaran_mahasiswa', [TopikPenawaranMahasiswaController::class, 'showTopikPenawaranMahasiswaForm'])->name('topik_penawaran_mahasiswa');
 
     Route::get('topik_penawaran_dosen', [TopikPenawaranDosenController::class, 'showTopikPenawaranDosenForm'])->name('topik_penawaran_dosen');
+
+    Route::get('agenda_seminar_proposal', [AgendaSeminarProposalController::class, 'showAgendaSemproForm'])->name('agenda_seminar_proposal');
+
+    Route::get('agenda_sidang_skripsi', [AgendaSidangSkripsiController::class, 'showAgendaSidSkripForm'])->name('agenda_sidang_skripsi');
 });
 
 // Route::get('/', function () {
