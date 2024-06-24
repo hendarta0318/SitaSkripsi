@@ -24,7 +24,14 @@
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 
-	<title>Sita Fasilkom</title>
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<link rel="shortcut icon" href="https://siakad.unej.ac.id/images/layouts/unej-icon.svg">
+
+	<title>SISMA ILKOM</title>
 
 	<link href="{{asset('adminkit/css/app.css')}}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -125,16 +132,16 @@
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar js-sidebar collapsed">
 			<div class="sidebar-content js-simplebar">
-				<a class="sidebar-brand" href="{{route('dashboard_mahasiswa')}}">
-					<img src="{{asset('adminkit/img/photos/SITA FASILKOM.png')}}" class="img-fluid">
+				<a class="sidebar-brand" href="{{route('beranda_mahasiswa')}}">
+					<img src="{{asset('adminkit/img/photos/SISMA ILKOM.png')}}" class="img-fluid">
         		</a>
 
 				<ul class="sidebar-nav">
 					<li class="sidebar-header"></li>
 
-					<li class="sidebar-item {{Route::is('dashboard_mahasiswa')?'active':''}}">
-						<a class="sidebar-link" href="{{route('dashboard_mahasiswa')}}">
-              				<i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
+					<li class="sidebar-item {{Route::is('beranda_mahasiswa')?'active':''}}">
+						<a class="sidebar-link" href="{{route('beranda_mahasiswa')}}">
+              				<i class="align-middle" data-feather="home"></i> <span class="align-middle">Beranda</span>
             			</a>
 					</li>
 
@@ -171,6 +178,12 @@
 					<li class="sidebar-item {{Route::is('surat_tugas')?'active':''}}">
 						<a class="sidebar-link" href="{{route('surat_tugas')}}">
               				<i class="align-middle" data-feather="file-text"></i> <span class="align-middle">Surat Tugas</span>
+            			</a>
+					</li>
+
+					<li class="sidebar-item {{Route::is('penilaian')?'active':''}}">
+						<a class="sidebar-link" href="{{route('penilaian')}}">
+              				<i class="align-middle" data-feather="clipboard"></i> <span class="align-middle">Penilaian</span>
             			</a>
 					</li>
 				</ul>
@@ -218,7 +231,7 @@
 
 			<div class="container-fluid" style="
 				margin-left: 20px;">
-				@yield('content-dashboard_mahasiswa')
+				@yield('content-beranda_mahasiswa')
 			</div>
 
 			<div class="container-fluid" style="
@@ -229,12 +242,12 @@
 		
 			<div class="container-fluid" style="
 				margin-left: 20px;">
-				@yield('content-usulan_pembimbing')
+				@yield('content-repository')
 			</div>
 
 			<div class="container-fluid" style="
 				margin-left: 20px;">
-				@yield('content-repository')
+				@yield('content-usulan_pembimbing')
 			</div>
 
 			<div class="container-fluid" style="
@@ -250,6 +263,11 @@
 			<div class="container-fluid" style="
 				margin-left: 20px;">
 				@yield('content-surat_tugas')
+			</div>
+
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-penilaian')
 			</div>
 
 			<div class="container-fluid" style="

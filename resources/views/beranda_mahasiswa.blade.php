@@ -1,18 +1,18 @@
 @extends('app_adminkit_mahasiswa')
 
-@section('content-dashboard_mahasiswa')
+@section('content-beranda_mahasiswa')
 <div class="">
 	<div class="row">
 		<div class="col-9">
 			<div class="container">
 				<div class="col-12 col-md-12">
-					<h1 class="h3 mb-3 mt-4"><b>Dashboard</b></h1>
+					<h1 class="h3 mb-3 mt-4"><b>Beranda</b></h1>
 					
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="card" style="height: 40px;">
 								<div class="card-header">
-									<h5 class="card-title mb-0">Halo {{ Auth::user()->name }} Selamat datang di SITA ILKOM</h5>
+									<h5 class="card-title mb-0 text-success" style="font-family: Poppins, sans-serif; font-weight: 400; font-style: normal;">Halo {{ Auth::user()->name }} Selamat datang di SISMA ILKOM</h5>
 								</div>
 							</div>
 						</div>

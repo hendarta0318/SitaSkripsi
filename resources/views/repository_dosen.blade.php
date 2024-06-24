@@ -4,7 +4,7 @@
     <div class="">
         <h1 class="h3 mb-3 mt-4"><b>Repository</b></h1>
         <div class="col-12">
-        <div class="card card-clickable" data-url="https://www.youtube.com/watch?v=y2zLFONuk7c">
+        <div class="card card-clickable" data-url="https://repository.unej.ac.id/handle/123456789/120055">
             <div class="card-body bg-white">
                 <h6 class="card-title mb-0 text-dark font-custom">
                     Pemodelan Prioritas Kebutuhan Berdasarkan Hasil Perankingan Fuzzy Moscow Menggunakan Text Mining 
@@ -14,7 +14,7 @@
                 </p>
             </div>
         </div>
-        <div class="card card-clickable" data-url="https://www.youtube.com/">
+        <div class="card card-clickable" data-url="https://repository.unej.ac.id/handle/123456789/119656">
             <div class="card-body bg-white">
                 <h6 class="card-title mb-0 text-dark">
                     Optimization of Gender Classification Based on Facial Images Using OD-LBP, Viola Jones, and PCA
@@ -24,7 +24,7 @@
                 </p>
             </div>
         </div>
-        <div class="card card-clickable" data-url="https://www.youtube.com/">
+        <div class="card card-clickable" data-url="https://repository.unej.ac.id/handle/123456789/119798">
             <div class="card-body bg-white">
                 <h6 class="card-title mb-0 text-dark">
                     Analisis Kepuasan Pengguna Aplikasi Mamikos Menggunakan Metode End User Computing Satisfaction dan Importance Performance Analysis
@@ -34,7 +34,7 @@
                 </p>
             </div>
         </div>
-        <div class="card card-clickable" data-url="https://www.youtube.com/">
+        <div class="card card-clickable" data-url="https://repository.unej.ac.id/handle/123456789/119146">
             <div class="card-body bg-white">
                 <h6 class="card-title mb-0 text-dark">
                     Implementasi Finite State Machine untuk Menentukan Perilaku Non-Playable Character pada Game Simulasi Kepemimpinan

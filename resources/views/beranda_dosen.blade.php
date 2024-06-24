@@ -1,49 +1,19 @@
 @extends('app_adminkit_dosen')
 
-@section('content-dashboard_dosen')
+@section('content-beranda_dosen')
     <div class="">
-	<h1 class="h3 mb-3 mt-4"><b>Dashboard</b></h1>
+	<h1 class="h3 mb-3 mt-4"><b>Beranda</b></h1>
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="card" style="height: 50px;">
 				<div class="card-header">
-					<h5 class="card-title mb-0">Halo {{ Auth::user()->name }} Selamat datang di SITA ILKOM</h5>
+					<h5 class="card-title mb-0 text-success" style="font-family: Poppins, sans-serif; font-weight: 400; font-style: normal;">Halo {{ Auth::user()->name }} Selamat datang di SITA ILKOM</h5>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="row">
-		<!-- <div class="col-lg-4">
-			<div class="card">
-				<div class="card-header">
-					<h5 class="card-title mb-0">Menempuh Skripsi</h5>
-					<h2 class="card-title-mb-0" style="font-size: 40px; display: inline-block;"><b>0</b></h2>
-					<h5 class="card-title-mb-0" style="font-size: 18px; display: inline-block; margin-left: 8px;">Mahasiswa</h5>
-				</div>
-			</div>
-		</div> -->
-
-		<!-- <div class="col-lg-4">
-			<div class="card">
-				<div class="card-header">
-					<h5 class="card-title mb-0">Seminar Proposal</h5>
-					<h2 class="card-title-mb-0" style="font-size: 40px; display: inline-block;"><b>0</b></h2>
-					<h5 class="card-title-mb-0" style="font-size: 18px; display: inline-block; margin-left: 8px;">Mahasiswa</h5>
-				</div>
-			</div>
-		</div> -->
-
-		<!-- <div class="col-lg-4">
-			<div class="card">
-				<div class="card-header">
-					<h5 class="card-title mb-0">Sidang Skripsi</h5>
-					<h2 class="card-title-mb-0" style="font-size: 40px; display: inline-block;"><b>0</b></h2>
-					<h5 class="card-title-mb-0" style="font-size: 18px; display: inline-block; margin-left: 8px;">Mahasiswa</h5>
-				</div>
-			</div>
-		</div> -->
-
 		<h1 class="h3 mb-3"><b>Daftar Mahasiswa Menempuh Skripsi</b></h1>
 		<div class="col-lg-12">
 			<div class="card">

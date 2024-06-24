@@ -29,10 +29,13 @@ class LoginController extends Controller
 
         if (Auth::attempt($infologin)){
             if(Auth::user()->role == 'mahasiswa'){
-                return redirect('dashboard_mahasiswa');
+                return redirect('beranda_mahasiswa');
             }
             elseif(Auth::user()->role == 'dosen'){
-                return redirect('dashboard_dosen');
+                return redirect('beranda_dosen');
+            }
+            elseif(Auth::user()->role == 'operator'){
+                return redirect('beranda_operator');
             }
         }else{
             return redirect('')->withErrors(

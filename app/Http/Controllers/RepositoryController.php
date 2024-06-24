@@ -14,4 +14,8 @@ class RepositoryController extends Controller
     {
         return view('repository_dosen');
     }
+    public function showRepositoryOperatorForm()
+    {
+        return view('repository_operator');
+    }
 }

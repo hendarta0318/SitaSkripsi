@@ -16,7 +16,13 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect('dashboard_mahasiswa'); // Ganti dengan rute yang sesuai
+            return redirect('dashboard_mahasiswa');
+        }
+        elseif (Auth::guard($guard)->check()) {
+            return redirect('dashboard_dosen');
+        }
+        elseif (Auth::guard($guard)->check()) {
+            return redirect('beranda_operator');
         }
 
         return $next($request);

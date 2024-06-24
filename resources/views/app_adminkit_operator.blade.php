@@ -30,7 +30,6 @@
 	<title>SISMA ILKOM</title>
 
 	<link href="{{asset('adminkit/css/app.css')}}" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 	<style>
 		.pagination {
@@ -41,6 +40,78 @@
 		.pagination .page-item {
 			margin: 0 5px;
 		}
+
+		.pagination {
+			display: flex;
+			justify-content: right;
+			list-style: none;
+		}
+		.pagination .page-item {
+			margin: 0 5px;
+		}
+
+		.btn {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border: none;
+            background-color: #F1416C;
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            border-radius: 5px;
+			 margin: 0 10px;
+        }
+
+        .btn svg {
+            margin-bottom: 4px; /* Jarak antara ikon dan teks */
+            width: 24px; /* Ubah ukuran ikon */
+            height: 24px; /* Ubah ukuran ikon */
+        }
+		.btn .feather {
+    		height: 35px;
+    		width: 35px;
+		}
+
+		 /* Style for the modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 35%; /* Could be more or less, depending on screen size */
+        }
+
+		/* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
 	</style>
 </head>
 
@@ -48,7 +119,7 @@
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar js-sidebar collapsed">
 			<div class="sidebar-content js-simplebar">
-				<a class="sidebar-brand" href="{{route('beranda_dosen')}}">
+				<a class="sidebar-brand" href="{{route('beranda_operator')}}">
 					<img src="{{asset('adminkit/img/photos/SISMA ILKOM.png')}}" class="img-fluid">
         		</a>
 
@@ -56,20 +127,20 @@
 					<li class="sidebar-header">
 					</li>
 
-					<li class="sidebar-item {{Route::is('beranda_dosen')?'active':''}}">
-						<a class="sidebar-link" href="{{route('beranda_dosen')}}">
-              				<i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
+					<li class="sidebar-item {{Route::is('beranda_operator')?'active':''}}">
+						<a class="sidebar-link" href="{{route('beranda_operator')}}">
+              				<i class="align-middle" data-feather="home"></i> <span class="align-middle">Beranda</span>
             			</a>
 					</li>
 
-					<li class="sidebar-item {{Route::is('topik_penawaran_dosen')?'active':''}}">
-						<a class="sidebar-link" href="{{route('topik_penawaran_dosen')}}">
+					<li class="sidebar-item {{Route::is('topik_penawaran_operator')?'active':''}}">
+						<a class="sidebar-link" href="{{route('topik_penawaran_operator')}}">
               				<i class="align-middle" data-feather="file"></i> <span class="align-middle">Topik Penawaran</span>
             			</a>
 					</li>
 
-					<li class="sidebar-item {{Route::is('repository_dosen')?'active':''}}">
-						<a class="sidebar-link" href="{{route('repository_dosen')}}">
+					<li class="sidebar-item {{Route::is('repository_operator')?'active':''}}">
+						<a class="sidebar-link" href="{{route('repository_operator')}}">
               				<i class="align-middle" data-feather="folder"></i> <span class="align-middle">Repository</span>
             			</a>
 					</li>
@@ -115,23 +186,57 @@
 
 			<div class="container-fluid" style="
 				margin-left: 20px;">
-				@yield('content-beranda_dosen')
+				@yield('content-beranda_operator')
 			</div>
 
 			<div class="container-fluid" style="
 				margin-left: 20px;">
-				@yield('content-topik_penawaran_dosen')
+				@yield('content-topik_penawaran_operator')
 			</div>
 
 			<div class="container-fluid" style="
 				margin-left: 20px;">
-				@yield('content-repository_dosen')
+				@yield('content-repository_operator')
 			</div>
 
 		</div>
 	</div>
 
 	<script src="{{asset('adminkit/js/app.js')}}"></script>
+
+	<script>
+        // Inisialisasi Feather Icons
+        feather.replace();
+    </script>
+
+	<script>
+	// Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks any link, open the modal 
+    document.querySelectorAll(".modalLink").forEach(link => {
+        link.onclick = function(event) {
+            event.preventDefault();
+            var content = this.getAttribute("data-content");
+            document.getElementById("modalText").innerText = content;
+            modal.style.display = "block";
+        }
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    // span.onclick = function() {
+    //     modal.style.display = "none";
+    // }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+	</script>
 
 	<script>
         $(document).ready(function() {
