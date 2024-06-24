@@ -1,6 +1,6 @@
-@extends('app_adminkit_mahasiswa')
+@extends('app_adminkit_operator')
 
-@section('content-topik_penawaran_mahasiswa')
+@section('content-topik_penawaran_operator')
     <div class="">
         <h1 class="h3 mb-3 mt-3"><b>Topik Penawaran</b></h1>
         <div class="col-lg-12">

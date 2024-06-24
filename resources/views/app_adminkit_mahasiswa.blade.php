@@ -13,8 +13,25 @@
 	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-blank.html" />
+	<link rel="canonical" href="https://demo-basic.adminkit.io/icons-feather.html" />
 
-	<title>Sita Fasilkom</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<link rel="shortcut icon" href="https://siakad.unej.ac.id/images/layouts/unej-icon.svg">
+
+	<title>SISMA ILKOM</title>
 
 	<link href="{{asset('adminkit/css/app.css')}}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -69,6 +86,44 @@
     		width: 35px;
 		}
 
+		 /* Style for the modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 35%; /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
 	</style>
 	
 </head>
@@ -77,16 +132,16 @@
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar js-sidebar collapsed">
 			<div class="sidebar-content js-simplebar">
-				<a class="sidebar-brand" href="{{route('dashboard_mahasiswa')}}">
-					<img src="{{asset('adminkit/img/photos/SITA FASILKOM.png')}}" class="img-fluid">
+				<a class="sidebar-brand" href="{{route('beranda_mahasiswa')}}">
+					<img src="{{asset('adminkit/img/photos/SISMA ILKOM.png')}}" class="img-fluid">
         		</a>
 
 				<ul class="sidebar-nav">
 					<li class="sidebar-header"></li>
 
-					<li class="sidebar-item {{Route::is('dashboard_mahasiswa')?'active':''}}">
-						<a class="sidebar-link" href="{{route('dashboard_mahasiswa')}}">
-              				<i class="align-middle" data-feather="home"></i> <span class="align-middle">Dashboard</span>
+					<li class="sidebar-item {{Route::is('beranda_mahasiswa')?'active':''}}">
+						<a class="sidebar-link" href="{{route('beranda_mahasiswa')}}">
+              				<i class="align-middle" data-feather="home"></i> <span class="align-middle">Beranda</span>
             			</a>
 					</li>
 
@@ -126,15 +181,20 @@
             			</a>
 					</li>
 
+					<li class="sidebar-item {{Route::is('penilaian')?'active':''}}">
+						<a class="sidebar-link" href="{{route('penilaian')}}">
+              				<i class="align-middle" data-feather="clipboard"></i> <span class="align-middle">Penilaian</span>
+            			</a>
+					</li>
+				</ul>
 			</div>
 		</nav>
 
 		<div class="main">
 			<nav class="navbar navbar-expand navbar-light navbar-bg">
 				<a class="sidebar-toggle js-sidebar-toggle">
-          <i class="hamburger align-self-center"></i>
-        </a>
-
+					<i class="hamburger align-self-center"></i>
+				</a>
 				<div class="navbar-collapse collapse">
 					<ul class="navbar-nav navbar-align">
 						<li class="nav-item dropdown">
@@ -152,13 +212,17 @@
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
                 				<img src="{{asset('adminkit/img/avatars/avatar.jpg')}}" class="avatar img-fluid rounded me-1" alt="" />
-								<span class="text-dark">Nama Mahasiswa</span>
+								<span class="text-dark">{{ Auth::user()->name }}</span>
               				</a>
 
 							<div class="dropdown-menu dropdown-menu-end">
 								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
-
-								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
+								<a class="dropdown-item" href='logout'>
+									<i class="align-middle me-1" data-feather="log-out"></i>Log out
+								</a>
+								<!-- <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+									<i class="align-middle me-1" data-feather="log-out"></i> Log out
+								</a> -->
 							</div>
 						</li>
 					</ul>
@@ -167,7 +231,7 @@
 
 			<div class="container-fluid" style="
 				margin-left: 20px;">
-				@yield('content-dashboard_mahasiswa')
+				@yield('content-beranda_mahasiswa')
 			</div>
 
 			<div class="container-fluid" style="
@@ -178,12 +242,12 @@
 		
 			<div class="container-fluid" style="
 				margin-left: 20px;">
-				@yield('content-usulan_pembimbing')
+				@yield('content-repository')
 			</div>
 
 			<div class="container-fluid" style="
 				margin-left: 20px;">
-				@yield('content-repository')
+				@yield('content-usulan_pembimbing')
 			</div>
 
 			<div class="container-fluid" style="
@@ -201,6 +265,20 @@
 				@yield('content-surat_tugas')
 			</div>
 
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-penilaian')
+			</div>
+
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-agenda_seminar_proposal')
+			</div>
+
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-agenda_sidang_skripsi')
+			</div>
 		</div>
 	</div>
 
@@ -209,6 +287,53 @@
 	<script>
         // Inisialisasi Feather Icons
         feather.replace();
+    </script>
+
+	<script>
+	// Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks any link, open the modal 
+    document.querySelectorAll(".modalLink").forEach(link => {
+        link.onclick = function(event) {
+            event.preventDefault();
+            var content = this.getAttribute("data-content");
+            document.getElementById("modalText").innerText = content;
+            modal.style.display = "block";
+        }
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    // span.onclick = function() {
+    //     modal.style.display = "none";
+    // }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+	</script>
+
+	<!-- inisiasi kalender -->
+	<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            flatpickr("#datetimepicker-dashboard", {
+                // Konfigurasi Flatpickr
+                inline: true,
+                dateFormat: "Y-m-d H:i",
+            });
+        });
+    </script>
+	
+	<!-- inisiasi tabel -->
+	<script>
+        $(document).ready(function() {
+            $('#datatables-reponsive').DataTable();
+        });
     </script>
 
 </body>

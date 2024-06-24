@@ -1,6 +1,6 @@
-@extends('app_adminkit_mahasiswa')
+@extends('app_adminkit_operator')
 
-@section('content-repository')
+@section('content-repository_operator')
 <div class="">
     <h1 class="h3 mb-3 mt-4"><b>Repository</b></h1>
 
