@@ -16,7 +16,11 @@ use App\Http\Controllers\TopikPenawaranMahasiswaController;
 use App\Http\Controllers\TopikPenawaranOperatorController;
 use App\Http\Controllers\TopikPenawaranDosenController;
 use App\Http\Controllers\AgendaSeminarProposalController;
+use App\Http\Controllers\AgendaSeminarProposalOperatorController;
 use App\Http\Controllers\AgendaSidangSkripsiController;
+use App\Http\Controllers\AgendaSidangSkripsiOperatorController;
+use App\Http\Controllers\MenambahkanAgendaSemproOperatorController;
+use App\Http\Controllers\MenambahSidSkripOperatorController;
 use App\Http\Middleware\UserAkses;
 use App\Http\Kernel;
 
@@ -56,8 +60,20 @@ Route::middleware(['auth'])-> group(function(){
     Route::get('topik_penawaran_dosen', [TopikPenawaranDosenController::class, 'showTopikPenawaranDosenForm'])->name('topik_penawaran_dosen');
 
     Route::get('agenda_seminar_proposal', [AgendaSeminarProposalController::class, 'showAgendaSemproForm'])->name('agenda_seminar_proposal');
+    Route::get('agenda_seminar_proposal_operator', [AgendaSeminarProposalOperatorController::class, 'showAgendaSemproOperatorForm'])->name('agenda_seminar_proposal_operator');
+    
+    // Route::get('menambahkan_agenda_seminar_proposal/edit/{nama}', [AgendaSeminarProposalOperatorController::class, 'edit'])->name('menambahkan_agenda_seminar_proposal.edit');
+    // Route::post('menambahkan_agenda_seminar_proposal/update/{nama}', [AgendaSeminarProposalOperatorController::class, 'update'])->name('menambahkan_agenda_seminar_proposal.update');
+    // Route::get('menambahkan_agenda_seminar_proposal/edit', [AgendaSeminarProposalOperatorController::class, 'edit'])->name('menambahkan_agenda_seminar_proposal');
+    
+    Route::get('menambahkan_agenda_sempro_operator', [MenambahkanAgendaSemproOperatorController::class, 'showMenambahSemproOperatorForm'])->name('menambahkan_agenda_sempro_operator');
+    Route::post('menambahkan_agenda_seminar_proposal', [MenambahkanAgendaSemproOperatorController::class, 'store'])->name('menambahkan_agenda_seminar_proposal.store');
+
 
     Route::get('agenda_sidang_skripsi', [AgendaSidangSkripsiController::class, 'showAgendaSidSkripForm'])->name('agenda_sidang_skripsi');
+    Route::get('agenda_sidang_skripsi_operator', [AgendaSidangSkripsiOperatorController::class, 'showAgendaSidSkripOperatorForm'])->name('agenda_sidang_skripsi_operator');
+    Route::get('menambahkan_agenda_sidskrip_operator', [MenambahSidSkripOperatorController::class, 'showMenambahSidSkripOperatorForm'])->name('menambahkan_agenda_sidskrip_operator');
+
 });
 
 // Route::get('/', function () {

@@ -57,23 +57,48 @@
             justify-content: center;
             padding: 10px 20px;
             border: none;
-            background-color: #F1416C;
             color: white;
             text-decoration: none;
             font-size: 12px;
             border-radius: 5px;
-			 margin: 0 10px;
+			margin: 0 10px;
         }
 
         .btn svg {
-            margin-bottom: 4px; /* Jarak antara ikon dan teks */
-            width: 24px; /* Ubah ukuran ikon */
-            height: 24px; /* Ubah ukuran ikon */
+            margin-bottom: 4px;
+            width: 24px;
+            height: 24px;
         }
 		.btn .feather {
     		height: 35px;
     		width: 35px;
 		}
+
+		.btn-info{
+			display: inline-flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			padding: 5px 15px;
+			border: none;
+			font-size: 16px;
+			color: white;
+			text-decoration: none;
+			font-size: 14px;
+			border-radius: 5px;
+			width: 70px;
+			height: 40px;
+		}
+		.mt-3 {
+            margin-top: 1rem;
+        }
+
+		.btn-fixed-right {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
 		 /* Style for the modal */
         .modal {
@@ -111,6 +136,21 @@
             color: black;
             text-decoration: none;
             cursor: pointer;
+        }
+
+		.actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .primary-action {
+            margin-bottom: 20px;
+        }
+        .secondary-actions {
+            display: flex;
+            gap: 10px;
         }
 	</style>
 </head>
@@ -199,6 +239,31 @@
 				@yield('content-repository_operator')
 			</div>
 
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-agenda_seminar_proposal_operator')
+			</div>
+
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-agenda_sidang_skripsi_operator')
+			</div>
+
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-menambahkan_agenda_sempro_operator')
+			</div>
+
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-edit_agenda_sempro_operator')
+			</div>
+
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-menambahkan_agenda_sidskrip_operator')
+			</div>
+
 		</div>
 	</div>
 
@@ -237,6 +302,16 @@
         }
     }
 	</script>
+
+	<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            flatpickr("#datetimepicker-dashboard", {
+                // Konfigurasi Flatpickr
+                inline: true,
+                dateFormat: "Y-m-d H:i",
+            });
+        });
+    </script>
 
 	<script>
         $(document).ready(function() {

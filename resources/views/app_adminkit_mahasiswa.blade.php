@@ -77,16 +77,15 @@
         }
 
         .btn svg {
-            margin-bottom: 4px; /* Jarak antara ikon dan teks */
-            width: 24px; /* Ubah ukuran ikon */
-            height: 24px; /* Ubah ukuran ikon */
+            margin-bottom: 4px;
+            width: 24px;
+            height: 24px;
         }
 		.btn .feather {
     		height: 35px;
     		width: 35px;
 		}
 
-		 /* Style for the modal */
         .modal {
             display: none; /* Hidden by default */
             position: fixed; /* Stay in place */
@@ -101,7 +100,6 @@
             padding-top: 60px;
         }
 
-        /* Modal Content/Box */
         .modal-content {
             background-color: #fefefe;
             margin: 5% auto; /* 15% from the top and centered */

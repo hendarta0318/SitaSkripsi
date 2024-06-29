@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\UsulanPembimbing;
 
 class BerandaOperatorController extends Controller
 {
     public function showBerandaOperatorForm()
     {
-        return view('beranda_operator');
+        $data = UsulanPembimbing::select('nim', 'nama', 'judul', 'no_wa')->paginate();
+        return view('beranda_operator', compact('data'));
     }
 }

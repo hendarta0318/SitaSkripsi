@@ -92,7 +92,7 @@
                                     2. Priza Pandunata S.Kom, M.Sc
                                     3. Achmad Maududie ST., M.Kom
                                     4. Muhamad Arief Hidayat S.Kom, M.Kom
-                                    5. Harry Soepandi">
+                                    5. Harry Soepandi S.Kom, M.Kom">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                             <circle cx="9" cy="7" r="4" />
@@ -142,7 +142,7 @@
                                     4. Dr. Dwiretno Istiyadi Swasono, ST.,M.Kom
                                     5. Muhamad Arief Hidayat, S.Kom., M.Kom
                                     6. Januar Adi Putra, S.Kom., M.Kom
-                                    7. Maliatul Fitriyasar">
+                                    7. Maliatul Fitriyasar M.Sc.">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                             <circle cx="9" cy="7" r="4" />
@@ -182,7 +182,7 @@
                                     
                                     1. Nelly Oktavia Adiwijaya, S.Si., M.T.
                                     2. Muhammad 'Ariful Furqon, S.Pd., M.Kom.
-                                    3. Maliatul Fitriyasari">
+                                    3. Maliatul Fitriyasari M.Sc.">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                             <circle cx="9" cy="7" r="4" />
@@ -255,14 +255,14 @@
                                     2. Priza Pandunata S.Kom, M.Sc
                                     3. Achmad Maududie ST., M.Kom
                                     4. Nelly Oktavia Adiwijaya, S.Si., M.T.
-                                    5. Saiful Bukhori
+                                    5. Prof. Dr. Saiful Bukhori ST., M.Kom
                                     6. Gama Wisnu Fajarianto, S.Kom., M.Kom
                                     7. Dr. Dwiretno Istiyadi Swasono, ST.,M.Kom
-                                    8. Nova El Maidah
+                                    8. Nova El Maidah S.Si., M.Cs.
                                     9. Muhammad 'Ariful Furqon, S.Pd., M.Kom.
                                     10. Muhamad Arief Hidayat S.Kom, M.Kom
                                     11. Gayatri Dwi Santika, S.SI.,M.Kom
-                                    12. Qurrota A'yuni Ar Ruhimat">
+                                    12. Qurrota A’yuni Ar Ruhimat S.Pd., M.Sc">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                             <circle cx="9" cy="7" r="4" />
@@ -332,7 +332,7 @@
                                     class="modalLink" 
                                     data-content="DOSEN / PENELITI
                                     
-                                    1. Nova El Maidah
+                                    1. Nova El Maidah S.Si., M.Cs.
                                     2. M. Zarkasi S.Kom., M.Kom.">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -367,9 +367,9 @@
                                     
                                     1. Yudha Alif Auliya S.Kom, M.Kom
                                     2. Gama Wisnu Fajarianto, S.Kom., M.Kom
-                                    3. Nova El Maidah
+                                    3. Nova El Maidah S.Si., M.Cs.
                                     4. Muhammad 'Ariful Furqon, S.Pd., M.Kom.
-                                    5. Yanuar Nurdiansyah
+                                    5. Yanuar Nurdiansyah, ST,.M.Cs.
                                     6. Prof. Drs. Slamin, M.Comp.Sc., Ph.D
                                     7. Gayatri Dwi Santika, S.SI.,M.Kom">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -622,7 +622,7 @@
                                     3. M. Zarkasi S.Kom, M.Kom
                                     4. Yudha Alif A. S.Kom, M.Kom
                                     5. Diksy Media F. S.Kom, M.Kom
-                                    6. Dwi Wijonarko">
+                                    6. Dwi Wijonarko S.Kom., M.Kom.">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                             <circle cx="9" cy="7" r="4" />
@@ -662,7 +662,7 @@
                                     
                                     1. Diksi Media F, S.Kom., M.Kom.
                                     2. M Zarkasi, S.Kom., M.Kom.
-                                    3. Dwi Wijonarko">
+                                    3. Dwi Wijonarko S.Kom., M.Kom.">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                             <circle cx="9" cy="7" r="4" />
@@ -701,7 +701,7 @@
                                 1. Achmad Maududie, ST, M.Sc
                                 2. Dr. Dwiretno Istiyadi Swasono, ST.,M.Kom
                                 3. Nova El Maidah, S.Si., M.Cs.
-                                4. Maliatul Fitriyasari">
+                                4. Maliatul Fitriyasari M.Sc.">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                         <circle cx="9" cy="7" r="4" />
@@ -1067,8 +1067,8 @@
                                 3. Tri Agustina Nugrahani, S.Kom., M.Kom
                                 4. Anang Andrianto, S.T.,MT.
                                 5. Karina Nine Amalia, S.Kom., M.Kom.
-                                6. Dwi Wijonarko
-                                7. Harry Soepandi">
+                                6. Dwi Wijonarko S.Kom., M.Kom.
+                                7. Harry Soepandi S.Kom., M.Kom.">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                         <circle cx="9" cy="7" r="4" />
@@ -1108,8 +1108,8 @@
                                     1. Anang Andrianto, ST., MT
                                     2. Januar Adi Putra, S.Kom., M.Kom
                                     3. Tri Agustina Nugrahani, S.Kom., M.Kom.
-                                    4. Dwi Wijonarko
-                                    5. Harry Soepandi">
+                                    4. Dwi Wijonarko S.Kom., M.Kom.
+                                    5. Harry Soepandi S.Kom., M.Kom.">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                             <circle cx="9" cy="7" r="4" />
@@ -1152,8 +1152,8 @@
                                     
                                     1.Windi Eka Yulia Retnani, S.Kom.,MT.
                                     2.Prof. Dr. Saiful Bukhori, ST., M.Kom.
-                                    3.Dwi Wijonarko
-                                    4.Harry Soepandi">
+                                    3.Dwi Wijonarko S.Kom., M.Kom.
+                                    4.Harry Soepandi S.Kom., M.Kom.">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                             <circle cx="9" cy="7" r="4" />

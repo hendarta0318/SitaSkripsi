@@ -14,7 +14,7 @@ class SeminarProposalController extends Controller
         return view('seminar_proposal');
     }
 
-     public function store(Request $request)
+    public function store(Request $request)
     {  
         // dd($request->all());
         $validate = Validator::make ($request->all(),[
@@ -47,6 +47,6 @@ class SeminarProposalController extends Controller
             'no_wa' => $request->no_wa,
         ]);
 
-        return redirect()->route('dashboard_mahasiswa');
+        return redirect()->route('beranda_mahasiswa');
     }
 }

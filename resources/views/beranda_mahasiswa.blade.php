@@ -76,85 +76,24 @@
 											<table id="datatables-reponsive" class="table table-striped dataTable no-footer dtr-inline" style="width: 100%;" aria-describedby="datatables-reponsive_info">
 												<thead style="background-color: #7239EA;">
 													<tr>
-														<th class="sorting sorting_asc text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 15px;" aria-label="No: activate to sort column descending" aria-sort="ascending">No</th>
-														<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 145px;" aria-label="Nim: activate to sort column ascending">Nim</th>
-														<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 200px;" aria-label="Nama Mahasiswa: activate to sort column ascending">Nama Mahasiswa</th>
-														<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 130px;" aria-label="Judul: activate to sort column ascending">Judul</th>
+														<th class="sorting sorting_asc text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 15px;" aria-label="No: activate to sort column descending" aria-sort="ascending">No.</th>
+														<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 80px;" aria-label="Nim: activate to sort column ascending">Nim</th>
+														<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 120px;" aria-label="Nama Mahasiswa: activate to sort column ascending">Nama Mahasiswa</th>
+														<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 400px;" aria-label="Judul: activate to sort column ascending">Judul</th>
 													</tr>
 												</thead>
 												<tbody>
+													<?php $i =$data->firstItem()?>
+													@foreach($data as $usulanpembimbingmahasiswa)
 													<tr class="odd">
-														<td class="dtr-control sorting_1" tabindex="0"></td>
-														<td>212410103030</td>
-														<td>M.Nurohman</td>
-														<td>Pengaruh kepuasan pe...</td>
+														<td class="dtr-control sorting_1" tabindex="0">{{ $i }}</td>
+														<td>{{ $usulanpembimbingmahasiswa->nim }}</td>
+														<td>{{ $usulanpembimbingmahasiswa->nama }}</td>
+														<td>{{ $usulanpembimbingmahasiswa->judul }}</td>
 													</tr>
-													<tr class="even">
-														<td class="dtr-control sorting_1" tabindex="0"></td>
-														<td>212410103031</td>
-														<td>Fathur</td>
-														<td>Pengaruh kepuasan pe...</td>
-													</tr>
-													<tr class="odd">
-														<td class="dtr-control sorting_1" tabindex="0"></td>
-														<td>212410103032</td>
-														<td>Candra</td>
-														<td>Pengaruh kepuasan pe...</td>
-													</tr>
-													<tr class="even">
-														<td class="dtr-control sorting_1" tabindex="0"></td>
-														<td>212410103033</td>
-														<td>Bima</td>
-														<td>Pengaruh kepuasan pe...</td>
-													</tr>
-													<tr class="odd">
-														<td class="dtr-control sorting_1" tabindex="0"></td>
-														<td>212410103034</td>
-														<td>Sukron</td>
-														<td>Pengaruh kepuasan pe...</td>
-													</tr>
-													<tr class="even">
-														<td class="dtr-control sorting_1" tabindex="0"></td>
-														<td>212410103035</td>
-														<td>latif</td>
-														<td>Pengaruh kepuasan pe...</td>
-													</tr>
-													<tr class="odd">
-														<td class="dtr-control sorting_1" tabindex="0"></td>
-														<td>212410103036</td>
-														<td>Sindi</td>
-														<td>Pengaruh kepuasan pe...</td>
-													</tr>
-													<tr class="even">
-														<td class="dtr-control sorting_1" tabindex="0"></td>
-														<td>212410103037</td>
-														<td>Putri</td>
-														<td>Pengaruh kepuasan pe...</td>
-													</tr>
-													<tr class="odd">
-														<td class="dtr-control sorting_1" tabindex="0"></td>
-														<td>212410103038</td>
-														<td>Indah Sari</td>
-														<td>Pengaruh kepuasan pe...</td>
-													</tr>
-													<tr class="even">
-														<td class="dtr-control sorting_1" tabindex="0"></td>
-														<td>212410103039</td>
-														<td>Abel</td>
-														<td>Pengaruh kepuasan pe...</td>
-													</tr>
-													<tr class="odd">
-														<td class="dtr-control sorting_1" tabindex="0"></td>
-														<td>212410103040</td>
-														<td>Adelia</td>
-														<td>Pengaruh kepuasan pe...</td>
-													</tr>
-													<tr class="even">
-														<td class="dtr-control sorting_1" tabindex="0"></td>
-														<td>212410103041</td>
-														<td>Anindia</td>
-														<td>Pengaruh kepuasan pe...</td>
-													</tr>
+													<?php $i++ ?>
+													@endforeach
+
 												</tbody>
 											</table>
 										</div>

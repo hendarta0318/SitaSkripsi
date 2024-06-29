@@ -47,6 +47,6 @@ class SidangSkripsiController extends Controller
             'no_wa' => $request->no_wa,
         ]);
 
-        return redirect()->route('dashboard_mahasiswa');
+        return redirect()->route('beranda_mahasiswa');
     }
 }

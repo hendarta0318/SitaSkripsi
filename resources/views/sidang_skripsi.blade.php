@@ -50,9 +50,63 @@
             <div class="col-sm-10">
                 <select class="form-select" aria-label="Default select example" id="topik1" name="topik1">
                     <option selected>-</option>
-                    <option value="Sistem Informasi">Sistem Informasi</option>
-                    <option value="Manajemen Proyek">Manajemen Proyek</option>
-                    <option value="Analisis Data">Analisis Data</option>
+                    <optgroup label="Artificial Intelligence">
+                        <option>Natural Language Processing</option>
+                        <option>Machine Learning</option>
+                        <option>Metaheuristics</option>
+                        <option>Robotics</option>
+                        <option >Expert System</option>
+                    </optgroup>
+                    <optgroup label="Data Science &amp; Business Intelligence">
+                        <option>Data Mining</option>
+                        <option>Text Mining</option>
+                        <option>Computer Vision</option>
+                        <option>Sound Processing</option>
+                        <option>Signal Processing</option>
+                    </optgroup>
+                    <optgroup label="Embedded System">
+                        <option >Standalone Embedded System</option>
+                        <option >Networked Embedded System</option>
+                    </optgroup>
+                    <optgroup label="Enterprise System">
+                        <option >Business Process Management</option>
+                        <option >Data and Knowledge Management</option>
+                        <option >Enterprise Management System</option>
+                        <option >Enterprise Architecture</option>
+                    </optgroup>
+                    <optgroup label="Game">
+                        <option >Gamification</option>
+                        <option >Game Intelligence</option>
+                        <option >Game Design &amp; Development</option>
+                    </optgroup>
+                    <optgroup label="Human Computer Interaction">
+                        <option >AR / VR</option>
+                        <option >UI / UX</option>
+                    </optgroup>
+                    <optgroup label="Information System Management">
+                        <option >IS / IT Strategy</option>
+                        <option >IS / IT Adoption</option>
+                        <option >IS / IT Evaluation</option>
+                        <option >IT Risk Management</option>
+                    </optgroup>
+                    <optgroup label="IT Infrastructure &amp; Networks">
+                        <option >Information Security</option>
+                        <option >Network Security</option>
+                        <option >Network Management</option>
+                        <option >IT Infrastructure</option>
+                        <option >Cloud Computing</option>
+                    </optgroup>
+                    <optgroup label="Software Engineering">
+                        <option >Software Requirement</option>
+                        <option >Software Design</option>
+                        <option >Software Testing</option>
+                        <option >Optimization in SE</option>
+                    </optgroup>
+                    <optgroup label="Theoritical Foundation">
+                        <option >Coding Theory</option>
+                        <option >Teori Bahasa dan Automata</option>
+                        <option >Graph Theory</option>
+                    </optgroup>
                 </select>
                 @error('topik1')
                     <small>{{$message}}</small>
@@ -65,9 +119,63 @@
             <div class="col-sm-10">
                 <select class="form-select" aria-label="Default select example" id="topik2" name="topik2">
                     <option selected>-</option>
-                    <option value="Sistem Informasi">Sistem Informasi</option>
-                    <option value="Manajemen Proyek">Manajemen Proyek</option>
-                    <option value="Analisis Data">Analisis Data</option>
+                    <optgroup label="Artificial Intelligence">
+                        <option>Natural Language Processing</option>
+                        <option>Machine Learning</option>
+                        <option>Metaheuristics</option>
+                        <option>Robotics</option>
+                        <option >Expert System</option>
+                    </optgroup>
+                    <optgroup label="Data Science &amp; Business Intelligence">
+                        <option>Data Mining</option>
+                        <option>Text Mining</option>
+                        <option>Computer Vision</option>
+                        <option>Sound Processing</option>
+                        <option>Signal Processing</option>
+                    </optgroup>
+                    <optgroup label="Embedded System">
+                        <option >Standalone Embedded System</option>
+                        <option >Networked Embedded System</option>
+                    </optgroup>
+                    <optgroup label="Enterprise System">
+                        <option >Business Process Management</option>
+                        <option >Data and Knowledge Management</option>
+                        <option >Enterprise Management System</option>
+                        <option >Enterprise Architecture</option>
+                    </optgroup>
+                    <optgroup label="Game">
+                        <option >Gamification</option>
+                        <option >Game Intelligence</option>
+                        <option >Game Design &amp; Development</option>
+                    </optgroup>
+                    <optgroup label="Human Computer Interaction">
+                        <option >AR / VR</option>
+                        <option >UI / UX</option>
+                    </optgroup>
+                    <optgroup label="Information System Management">
+                        <option >IS / IT Strategy</option>
+                        <option >IS / IT Adoption</option>
+                        <option >IS / IT Evaluation</option>
+                        <option >IT Risk Management</option>
+                    </optgroup>
+                    <optgroup label="IT Infrastructure &amp; Networks">
+                        <option >Information Security</option>
+                        <option >Network Security</option>
+                        <option >Network Management</option>
+                        <option >IT Infrastructure</option>
+                        <option >Cloud Computing</option>
+                    </optgroup>
+                    <optgroup label="Software Engineering">
+                        <option >Software Requirement</option>
+                        <option >Software Design</option>
+                        <option >Software Testing</option>
+                        <option >Optimization in SE</option>
+                    </optgroup>
+                    <optgroup label="Theoritical Foundation">
+                        <option >Coding Theory</option>
+                        <option >Teori Bahasa dan Automata</option>
+                        <option >Graph Theory</option>
+                    </optgroup>
                 </select>
                 @error('topik2')
                     <small>{{$message}}</small>
@@ -80,9 +188,37 @@
             <div class="col-sm-10">
                 <select class="form-select" aria-label="Default select example" id="dosen_pembimbing1" name="dosen_pembimbing1">
                     <option selected>-</option>
-                    <option value="Dr. Rico">Dr. Rico</option>
-                    <option value="Prof. Lucky">Prof. Lucky</option>
-                    <option value="Dr. Emely">Dr. Emely</option>
+                    <option value="Achmad Maududie ST, M.Sc.">Achmad Maududie ST, M.Sc.</option>
+                    <option value="Anang Andrianto ST.,MT">Anang Andrianto ST.,MT</option>
+                    <option value="Beny Prasetyo S.Kom., M.Kom">Beny Prasetyo S.Kom., M.Kom</option>
+                    <option value="Diah Ayu Retnani Wulandari S.T.,M.Eng">Diah Ayu Retnani Wulandari S.T.,M.Eng</option>
+                    <option value="Diksy Media Firmansyah S.Kom., M.Kom">Diksy Media Firmansyah S.Kom., M.Kom</option>
+                    <option value="Dr Dwiretno Istiyadi Swasono ST.,M.Kom.">Dr Dwiretno Istiyadi Swasono ST.,M.Kom.</option>
+                    <option value="Dwi Wijonarko S.Kom., M.Kom.">Dwi Wijonarko S.Kom., M.Kom.</option>
+                    <option value="Fahrobby Adnan S.Kom., M.MSI">Fahrobby Adnan S.Kom., M.MSI</option>
+                    <option value="Fajrin Nurman Arifin S.T., M.Eng.">Fajrin Nurman Arifin S.T., M.Eng.</option>
+                    <option value="GAMA WISNU FAJARIANTO S.Kom., M.Kom.">GAMA WISNU FAJARIANTO S.Kom., M.Kom.</option>
+                    <option value="Gayatri Dwi Santika S.SI., M.Kom">Gayatri Dwi Santika S.SI., M.Kom</option>
+                    <option value="Harry Soepandi S.Kom., M.Kom.">Harry Soepandi S.Kom., M.Kom.</option>
+                    <option value="Januar Adi Putra S.Kom., M.Kom">Januar Adi Putra S.Kom., M.Kom</option>
+                    <option value="Karina Nine Amalia, S.Kom., M.Kom.">Karina Nine Amalia, S.Kom., M.Kom.</option>
+                    <option value="Maliatul Fitriyasari M.Sc.">Maliatul Fitriyasari M.Sc.</option>
+                    <option value="Mohammad Zarkasi, S.Kom., M.Kom.">Mohammad Zarkasi, S.Kom., M.Kom.</option>
+                    <option value="Muhamad Arief Hidayat S.Kom,.M.Kom.">Muhamad Arief Hidayat S.Kom,.M.Kom.</option>
+                    <option value="Muhammad `Ariful Furqon, S.Pd., M.Kom.">Muhammad `Ariful Furqon, S.Pd., M.Kom.</option>
+                    <option value="Nelly Oktavia Adiwijaya S.Si.,MT.">Nelly Oktavia Adiwijaya S.Si.,MT.</option>
+                    <option value="Nova El Maidah S.Si., M.Cs.">Nova El Maidah S.Si., M.Cs.</option>
+                    <option value="Oktalia Juwita S.Kom., M.MT">Oktalia Juwita S.Kom., M.MT</option>
+                    <option value="Priza Pandunata S.Kom., M.Sc.">Priza Pandunata S.Kom., M.Sc.</option>
+                    <option value="Prof. Dr. Saiful Bukhori ST., M.Kom">Prof. Dr. Saiful Bukhori ST., M.Kom</option>
+                    <option value="Prof. Drs. Antonius Cahya Prihandoko, M.App.Sc., Ph.D.">Prof. Drs. Antonius Cahya Prihandoko, M.App.Sc., Ph.D.</option>
+                    <option value="Prof. Drs. Slamin, M.Comp.Sc., Ph.D.">Prof. Drs. Slamin, M.Comp.Sc., Ph.D.</option>
+                    <option value="Qurrota A'yuni Ar Ruhimat S.Pd., M.Sc.">Qurrota A'yuni Ar Ruhimat S.Pd., M.Sc.</option>
+                    <option value="Tio Dharmawan S.Kom., M.Kom">Tio Dharmawan S.Kom., M.Kom</option>
+                    <option value="Tri Agustina Nugrahani, S.Kom., M.Kom.">Tri Agustina Nugrahani, S.Kom., M.Kom.</option>
+                    <option value="Windi Eka Yulia Retnani S.Kom.,MT.">Windi Eka Yulia Retnani S.Kom.,MT.</option>
+                    <option value="Yanuar Nurdiansyah, ST,.M.Cs.">Yanuar Nurdiansyah, ST,.M.Cs.</option>
+                    <option value="Yudha Alif Auliya S.Kom., M.Kom.">Yudha Alif Auliya S.Kom., M.Kom.</option>
                 </select>
                 @error('dosen_pembimbing1')
                     <small>{{ $message }}</small>
@@ -95,9 +231,37 @@
             <div class="col-sm-10">
                 <select class="form-select" aria-label="Default select example" id="dosen_pembimbing2" name="dosen_pembimbing2">
                     <option selected>-</option>
-                    <option value="Dr. Rico">Dr. Rico</option>
-                    <option value="Prof. Lucky">Prof. Lucky</option>
-                    <option value="Dr. Emely">Dr. Emely</option>
+                    <option value="Achmad Maududie ST, M.Sc.">Achmad Maududie ST, M.Sc.</option>
+                    <option value="Anang Andrianto ST.,MT">Anang Andrianto ST.,MT</option>
+                    <option value="Beny Prasetyo S.Kom., M.Kom">Beny Prasetyo S.Kom., M.Kom</option>
+                    <option value="Diah Ayu Retnani Wulandari S.T.,M.Eng">Diah Ayu Retnani Wulandari S.T.,M.Eng</option>
+                    <option value="Diksy Media Firmansyah S.Kom., M.Kom">Diksy Media Firmansyah S.Kom., M.Kom</option>
+                    <option value="Dr Dwiretno Istiyadi Swasono ST.,M.Kom.">Dr Dwiretno Istiyadi Swasono ST.,M.Kom.</option>
+                    <option value="Dwi Wijonarko S.Kom., M.Kom.">Dwi Wijonarko S.Kom., M.Kom.</option>
+                    <option value="Fahrobby Adnan S.Kom., M.MSI">Fahrobby Adnan S.Kom., M.MSI</option>
+                    <option value="Fajrin Nurman Arifin S.T., M.Eng.">Fajrin Nurman Arifin S.T., M.Eng.</option>
+                    <option value="GAMA WISNU FAJARIANTO S.Kom., M.Kom.">GAMA WISNU FAJARIANTO S.Kom., M.Kom.</option>
+                    <option value="Gayatri Dwi Santika S.SI., M.Kom">Gayatri Dwi Santika S.SI., M.Kom</option>
+                    <option value="Harry Soepandi S.Kom., M.Kom.">Harry Soepandi S.Kom., M.Kom.</option>
+                    <option value="Januar Adi Putra S.Kom., M.Kom">Januar Adi Putra S.Kom., M.Kom</option>
+                    <option value="Karina Nine Amalia, S.Kom., M.Kom.">Karina Nine Amalia, S.Kom., M.Kom.</option>
+                    <option value="Maliatul Fitriyasari M.Sc.">Maliatul Fitriyasari M.Sc.</option>
+                    <option value="Mohammad Zarkasi, S.Kom., M.Kom.">Mohammad Zarkasi, S.Kom., M.Kom.</option>
+                    <option value="Muhamad Arief Hidayat S.Kom,.M.Kom.">Muhamad Arief Hidayat S.Kom,.M.Kom.</option>
+                    <option value="Muhammad `Ariful Furqon, S.Pd., M.Kom.">Muhammad `Ariful Furqon, S.Pd., M.Kom.</option>
+                    <option value="Nelly Oktavia Adiwijaya S.Si.,MT.">Nelly Oktavia Adiwijaya S.Si.,MT.</option>
+                    <option value="Nova El Maidah S.Si., M.Cs.">Nova El Maidah S.Si., M.Cs.</option>
+                    <option value="Oktalia Juwita S.Kom., M.MT">Oktalia Juwita S.Kom., M.MT</option>
+                    <option value="Priza Pandunata S.Kom., M.Sc.">Priza Pandunata S.Kom., M.Sc.</option>
+                    <option value="Prof. Dr. Saiful Bukhori ST., M.Kom">Prof. Dr. Saiful Bukhori ST., M.Kom</option>
+                    <option value="Prof. Drs. Antonius Cahya Prihandoko, M.App.Sc., Ph.D.">Prof. Drs. Antonius Cahya Prihandoko, M.App.Sc., Ph.D.</option>
+                    <option value="Prof. Drs. Slamin, M.Comp.Sc., Ph.D.">Prof. Drs. Slamin, M.Comp.Sc., Ph.D.</option>
+                    <option value="Qurrota A'yuni Ar Ruhimat S.Pd., M.Sc.">Qurrota A'yuni Ar Ruhimat S.Pd., M.Sc.</option>
+                    <option value="Tio Dharmawan S.Kom., M.Kom">Tio Dharmawan S.Kom., M.Kom</option>
+                    <option value="Tri Agustina Nugrahani, S.Kom., M.Kom.">Tri Agustina Nugrahani, S.Kom., M.Kom.</option>
+                    <option value="Windi Eka Yulia Retnani S.Kom.,MT.">Windi Eka Yulia Retnani S.Kom.,MT.</option>
+                    <option value="Yanuar Nurdiansyah, ST,.M.Cs.">Yanuar Nurdiansyah, ST,.M.Cs.</option>
+                    <option value="Yudha Alif Auliya S.Kom., M.Kom.">Yudha Alif Auliya S.Kom., M.Kom.</option>
                 </select>
                 @error('dosen_pembimbing2')
                     <small>{{$message}}</small>

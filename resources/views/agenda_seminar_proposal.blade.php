@@ -1,5 +1,5 @@
 @extends('app_adminkit_mahasiswa')
-
+<!-- mahasiswa -->
 @section('content-agenda_seminar_proposal')
 <div class="main-content">
     <div class="">

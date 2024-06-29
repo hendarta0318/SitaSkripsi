@@ -33,7 +33,7 @@ class SuratTugasController extends Controller
             'surat_tugas_sidang_skripsi' => $sidangSkripsiPath,
         ]);
 
-        return redirect()->route('dashboard_mahasiswa');
+        return redirect()->route('beranda_mahasiswa');
 
     }
 }
