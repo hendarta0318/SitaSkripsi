@@ -31,6 +31,11 @@
 
 	<link rel="shortcut icon" href="https://siakad.unej.ac.id/images/layouts/unej-icon.svg">
 
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 	<title>SISMA ILKOM</title>
 
 	<link href="{{asset('adminkit/css/app.css')}}" rel="stylesheet">
@@ -68,7 +73,6 @@
             justify-content: center;
             padding: 10px 20px;
             border: none;
-            background-color: #F1416C;
             color: white;
             text-decoration: none;
             font-size: 12px;
@@ -270,12 +274,17 @@
 
 			<div class="container-fluid" style="
 				margin-left: 20px;">
-				@yield('content-agenda_seminar_proposal')
+				@yield('content-agenda_seminar_proposal_mahasiswa')
 			</div>
 
 			<div class="container-fluid" style="
 				margin-left: 20px;">
-				@yield('content-agenda_sidang_skripsi')
+				@yield('content-agenda_sidang_skripsi_mahasiswa')
+			</div>
+
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-detail_agenda_sempro_mahasiswa')
 			</div>
 		</div>
 	</div>

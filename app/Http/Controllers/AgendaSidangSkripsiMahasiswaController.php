@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AgendaSidangSkripsiController extends Controller
+class AgendaSidangSkripsiMahasiswaController extends Controller
 {
     public function showAgendaSidSkripForm()
     {
-        return view('agenda_sidang_skripsi');
+        return view('agenda_sidang_skripsi_mahasiswa');
     }
 }

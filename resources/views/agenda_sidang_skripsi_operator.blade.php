@@ -6,7 +6,7 @@
         <div class="col-12 col-md-11">
             <div class="row">
                 <div class="col-lg-9 col-sm-5 d-flex">
-                    <h1 class="h3 mb-3 mt-4"><b>Agenda Sidang Skripsi</b></h1>
+                    <h1 class="h3 mb-3 mt-4"><b>Agenda Sidang Skripsi Operator</b></h1>
                 </div>
 
                 <div class="col-lg-3 col-sm-7 d-flex align-items-center justify-content-end">

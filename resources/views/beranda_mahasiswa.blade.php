@@ -130,13 +130,13 @@
 						<div class="card-body">
 							<div class="row">
 								<div class="col-md-6">
-									<a href="{{route('agenda_seminar_proposal')}}" class="btn" style="background-color: #009EF7;">
+									<a href="{{route('agenda_seminar_proposal_mahasiswa')}}" class="btn" style="background-color: #009EF7;">
 										<i data-feather="file"></i>	Seminar Proposal
 									</a>
 								</div>
 								
 								<div class="col-md-6">
-									<a href="{{route('agenda_sidang_skripsi')}}" class="btn" style="background-color: #F1416C;">
+									<a href="{{route('agenda_sidang_skripsi_mahasiswa')}}" class="btn" style="background-color: #F1416C;">
 										<i data-feather="file"></i>	Sidang Skripsi
 									</a>
 								</div>
