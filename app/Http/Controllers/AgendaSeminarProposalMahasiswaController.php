@@ -18,6 +18,6 @@ class AgendaSeminarProposalMahasiswaController extends Controller
     public function show($id)
     {
         $agendasempro = MenambahkanAgendaSemproOperator::findOrFail($id);
-        return view('detail_agenda_mahasiswa', compact('agendasempro'));
+        return view('detail_agenda_sempro_mahasiswa', compact('agendasempro'));
     }
 }

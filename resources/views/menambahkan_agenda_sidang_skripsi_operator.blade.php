@@ -1,14 +1,14 @@
 @extends('app_adminkit_operator')
 
-@section('content-menambahkan_agenda_sempro_operator')
+@section('content-menambahkan_agenda_sidang_skripsi_operator')
 <div class="">
 	<div class="row">
 		<div class="col-12">
 			<div class="">
 				<div class="col-12 col-md-12">
-					<h1 class="h3 mb-3 mt-4"><b>Menambah Jadwal Agenda Seminar Proposal</b></h1>
+					<h1 class="h3 mb-3 mt-4"><b>Menambah Jadwal Agenda Sidang Skripsi</b></h1>
 
-                    <form action="{{ route('menambahkan_agenda_seminar_proposal.store') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('menambahkan_agenda_sidang_skripsi.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3 row">
                             <label for="inputNama" class="col-sm-2 col-form-label">Nama Mahasiswa *</label>
@@ -246,7 +246,7 @@
                             <label for="" class="col-sm-2 col-form-label"></label>
                             <div class="col-sm-10">
                                 <button type="submit" class="btn btn-primary">Simpan</button>
-                                <a href="{{ route('agenda_seminar_proposal_operator') }}" class="btn btn-secondary">Kembali</a>
+                                <a href="{{ route('agenda_sidang_skripsi_operator') }}" class="btn btn-secondary">Kembali</a>
                             </div>
                         </div>
                     </form>

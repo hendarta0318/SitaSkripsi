@@ -12,6 +12,7 @@
                 <div class="col-lg-3 col-sm-7 d-flex align-items-center justify-content-end">
                     <a href="{{ route('menambahkan_agenda_sempro_operator') }}" class="btn btn-info mt-2">
                     Add <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus" style="width: 25px; height: 25px; margin-bottom: 1px; margin-left: 3px"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></a>
+                    <a href="{{ route('beranda_operator') }}" class="btn btn-secondary mt-2">Kembali</a>
                 </div>
             </div>
             <div class="col-12 mt-4">

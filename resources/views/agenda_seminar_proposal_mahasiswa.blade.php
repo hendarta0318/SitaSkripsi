@@ -4,8 +4,17 @@
 <div class="main-content">
     <div class="">
         <div class="col-12 col-md-11">
-            <h1 class="h3 mb-3 mt-4"><b>Agenda Seminar Proposal Mahasiswa</b></h1>
-            <div class="col-12">
+            
+            <div class="row">
+                <div class="col-lg-9 col-sm-5 d-flex">
+                    <h1 class="h3 mb-3 mt-4"><b>Agenda Seminar Proposal Mahasiswa</b></h1>
+                </div>
+
+                <div class="col-lg-3 col-sm-7 d-flex align-items-center justify-content-end">
+                    <a href="{{ route('beranda_mahasiswa') }}" class="btn btn-secondary mt-2">Kembali</a>
+                </div>
+            </div>
+            <div class="col-12 mt-4">
                 @foreach($data as $agendasempro)
                 <div class="card card-body">
                     <div class="row">

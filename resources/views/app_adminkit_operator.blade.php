@@ -256,6 +256,11 @@
 
 			<div class="container-fluid" style="
 				margin-left: 20px;">
+				@yield('content-menambahkan_agenda_sidang_skripsi_operator')
+			</div>
+
+			<div class="container-fluid" style="
+				margin-left: 20px;">
 				@yield('content-edit_agenda_sempro_operator')
 			</div>
 

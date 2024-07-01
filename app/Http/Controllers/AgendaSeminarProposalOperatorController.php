@@ -96,6 +96,6 @@ class AgendaSeminarProposalOperatorController extends Controller
     public function show($id)
     {
         $agendasempro = MenambahkanAgendaSemproOperator::findOrFail($id);
-        return view('detail_agenda', compact('agendasempro'));
+        return view('detail_agenda_sempro_operator', compact('agendasempro'));
     }
 }

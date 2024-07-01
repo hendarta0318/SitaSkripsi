@@ -1,13 +1,13 @@
-@extends('app_adminkit_operator')
+@extends('app_adminkit_mahasiswa')
 
-@section('content-menambahkan_agenda_sempro_operator')
+@section('content-detail_agenda_sempro_mahasiswa')
 <div class="main-content">
     <div class="container mt-1">
         <div class="card">
             <div class="card-header">
-                <h3>Detail Agenda Seminar Proposal</h3>
+                <h3>Detail Agenda Seminar Proposal Mahasiswa</h3>
             </div>
-            <div class="card-body">
+             <div class="card-body">
                 <p><strong>Nama:</strong> {{ $agendasempro->nama }}</p>
                 <p><strong>Tanggal:</strong> {{ $agendasempro->tanggal }}</p>
                 <p><strong>Waktu:</strong> {{ $agendasempro->waktu }}</p>
@@ -18,7 +18,7 @@
                 <p><strong>Dosen Pembimbing 2:</strong> {{ $agendasempro->dosen_pembimbing2 }}</p>
                 <p><strong>Penguji 1:</strong> {{ $agendasempro->penguji1 }}</p>
                 <p><strong>Penguji 2:</strong> {{ $agendasempro->penguji2 }}</p>
-                <a href="{{ route('agenda_seminar_proposal_operator') }}" class="btn btn-primary">Kembali</a>
+                <a href="{{ route('agenda_seminar_proposal_mahasiswa') }}" class="btn btn-primary">Kembali</a>
             </div>
         </div>
     </div>
