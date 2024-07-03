@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 // use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\BerandaMahasiswaController;
 use App\Http\Controllers\BerandaDosenController;
@@ -32,11 +33,14 @@ Route::middleware(['auth'])-> group(function(){
     Route::get('beranda_mahasiswa', [BerandaMahasiswaController::class, 'showBerandaMhsForm'])->name('beranda_mahasiswa'); //->middleware(['userAkses:mahasiswa']);
     Route::get('beranda_dosen', [BerandaDosenController::class, 'showBerandaDosenForm'])->name('beranda_dosen'); //->middleware(['userAkses:dosen']);
     Route::get('beranda_operator', [BerandaOperatorController::class, 'showBerandaOperatorForm'])->name('beranda_operator'); //->middleware(['userAkses:operator']);
+    Route::get('profile',[ProfileController::class, 'showProfile'])->name('profile');
     Route::get('logout',[LoginController::class, 'logout']);
 
     Route::post('usulan-pembimbing', [UsulanPembimbingController::class, 'store'])->name('usulan-pembimbing.store');
     Route::get('usulan_pembimbing', [UsulanPembimbingController::class, 'showUsulanPembimbingForm'])->name('usulan_pembimbing');
-    
+    Route::get('usulan_pembimbing/{id}/{fileType}', [UsulanPembimbingController::class, 'downloadFile'])->name('usulan_pembimbing.download');
+    Route::delete('usulan_pembimbing/{id}', [UsulanPembimbingController::class, 'destroy'])->name('usulan_pembimbing.destroy');
+
     Route::get('repository', [RepositoryController::class, 'showRepositoryForm'])->name('repository');
     Route::get('repository_dosen', [RepositoryController::class, 'showRepositoryDosenForm'])->name('repository_dosen');
     Route::get('repository_operator', [RepositoryController::class, 'showRepositoryOperatorForm'])->name('repository_operator');

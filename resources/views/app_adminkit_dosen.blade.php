@@ -103,7 +103,7 @@
 								<span class="text-dark">{{ Auth::user()->name }}</span>
               				</a>
 							<div class="dropdown-menu dropdown-menu-end">
-								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+								<a class="dropdown-item" href="{{ route('profile')}}"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
 								<a class="dropdown-item" href='logout'>
 									<i class="align-middle me-1" data-feather="log-out"></i>Log out
 								</a>
@@ -126,6 +126,11 @@
 			<div class="container-fluid" style="
 				margin-left: 20px;">
 				@yield('content-repository_dosen')
+			</div>
+
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-profile')
 			</div>
 
 		</div>

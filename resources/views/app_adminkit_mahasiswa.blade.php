@@ -185,7 +185,7 @@
 
 					<li class="sidebar-item {{Route::is('penilaian')?'active':''}}">
 						<a class="sidebar-link" href="{{route('penilaian')}}">
-              				<i class="align-middle" data-feather="clipboard"></i> <span class="align-middle">Penilaian</span>
+              				<i class="align-middle" data-feather="clipboard"></i> <span class="align-middle"> Hasil Penilaian</span>
             			</a>
 					</li>
 				</ul>
@@ -218,7 +218,7 @@
               				</a>
 
 							<div class="dropdown-menu dropdown-menu-end">
-								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+								<a class="dropdown-item" href="{{ route('profile')}}"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
 								<a class="dropdown-item" href='logout'>
 									<i class="align-middle me-1" data-feather="log-out"></i>Log out
 								</a>
@@ -285,6 +285,11 @@
 			<div class="container-fluid" style="
 				margin-left: 20px;">
 				@yield('content-detail_agenda_sempro_mahasiswa')
+			</div>
+
+			<div class="container-fluid" style="
+				margin-left: 20px;">
+				@yield('content-profile')
 			</div>
 		</div>
 	</div>

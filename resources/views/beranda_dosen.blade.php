@@ -2,81 +2,95 @@
 
 @section('content-beranda_dosen')
     <div class="">
-	<h1 class="h3 mb-3 mt-4"><b>Beranda</b></h1>
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="card" style="height: 50px;">
-				<div class="card-header">
-					<h5 class="card-title mb-0 text-success" style="font-family: Poppins, sans-serif; font-weight: 400; font-style: normal;">Halo {{ Auth::user()->name }} Selamat datang di SITA ILKOM</h5>
-				</div>
-			</div>
-		</div>
-	</div>
+        <h1 class="h3 mb-3 mt-4"><b>Beranda</b></h1>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card" style="height: 50px;">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0 text-success" style="font-family: Poppins, sans-serif; font-weight: 400; font-style: normal;">Halo {{ Auth::user()->name }} Selamat datang di SITA ILKOM</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-	<div class="row">
-		<h1 class="h3 mb-3"><b>Daftar Mahasiswa Menempuh Skripsi</b></h1>
-		<div class="col-lg-12">
-			<div class="card">
-				<div class="card-body">
-					<div id="datatables-reponsive_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
-						<div class="row mb-2">
-							<div class="col-sm-12 col-md-6">
-								<div class="dataTables_length" id="datatables-reponsive_length"></div>
-							</div>
-						</div>
-						<div class="row dt-row">
-							<div class="col-sm-12">
-								<table id="datatables-reponsive" class="table table-striped dataTable no-footer dtr-inline" style="width: 100%;" aria-describedby="datatables-reponsive_info">
-									<thead style="background-color: #7239EA;">
-										<tr>
-											<th class="sorting sorting_asc text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 15px;" aria-label="No: activate to sort column descending" aria-sort="ascending">No</th>
-											<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 80px;" aria-label="Nim: activate to sort column ascending">Nim</th>
-											<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 120px;" aria-label="Nama Mahasiswa: activate to sort column ascending">Nama Mahasiswa</th>
-											<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 125px;" aria-label="Nama Dosen Pembimbing1: activate to sort column ascending">Nama Dosen Pembimbing 1</th>
-											<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 125px;" aria-label="Nama Dosen Pembimbing2: activate to sort column ascending">Nama Dosen Pembimbing 2</th>
-											<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 225px;" aria-label="Judul: activate to sort column ascending">Judul</th>
-											<th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 20px;" aria-label="Action: activate to sort column ascending">Action</th>
-										</tr>
-									</thead>
-									<tbody>
-										<?php $i =$data->firstItem()?>
-										@foreach($data as $usulanpembimbingdosen)
-										<tr class="odd">
-											<td class="dtr-control sorting_1" tabindex="0">{{ $i }}</td>
-											<td>{{ $usulanpembimbingdosen->nim }}</td>
-											<td>{{ $usulanpembimbingdosen->nama }}</td>
-											<td>{{ $usulanpembimbingdosen->dosen_pembimbing1 }}</td>
-											<td>{{ $usulanpembimbingdosen->dosen_pembimbing2 }}</td>
-											<td>{{ $usulanpembimbingdosen->judul }}</td>
-											<td class="table-action">
-												<a href="#">
-													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-														<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
-														<polyline points="13 2 13 9 20 9" />
-													</svg>
-												</a>
-												<a href="#">
-													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-														<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-														<polyline points="14 2 14 8 20 8" />
-														<line x1="16" x2="8" y1="13" y2="13" />
-														<line x1="16" x2="8" y1="17" y2="17" />
-														<polyline points="10 9 9 9 8 9" />
-													</svg>
-												</a>
-											</td>
-										</tr>
-										<?php $i++ ?>
-										@endforeach
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
+        <div class="row">
+            <h1 class="h3 mb-3"><b>Daftar Mahasiswa Menempuh Skripsi</b></h1>
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div id="datatables-reponsive_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                            <div class="row mb-2">
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="dataTables_length" id="datatables-reponsive_length"></div>
+                                </div>
+                            </div>
+                            <div class="row dt-row">
+                                <div class="col-sm-12">
+                                    <table id="datatables-reponsive" class="table table-striped dataTable no-footer dtr-inline" style="width: 100%;" aria-describedby="datatables-reponsive_info">
+                                        <thead style="background-color: #7239EA;">
+                                            <tr>
+                                                <th class="sorting sorting_asc text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 15px;" aria-label="No: activate to sort column descending" aria-sort="ascending">No</th>
+                                                <th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 80px;" aria-label="Nim: activate to sort column ascending">Nim</th>
+                                                <th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 120px;" aria-label="Nama Mahasiswa: activate to sort column ascending">Nama Mahasiswa</th>
+                                                <th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 125px;" aria-label="Nama Dosen Pembimbing1: activate to sort column ascending">Nama Dosen Pembimbing 1</th>
+                                                <th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 125px;" aria-label="Nama Dosen Pembimbing2: activate to sort column ascending">Nama Dosen Pembimbing 2</th>
+                                                <th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 225px;" aria-label="Judul: activate to sort column ascending">Judul</th>
+                                                <th class="sorting text-light" tabindex="0" aria-controls="datatables-reponsive" rowspan="1" colspan="1" style="width: 20px;" aria-label="Action: activate to sort column ascending">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $i = $data->firstItem() ?>
+                                            @foreach($data as $usulanpembimbingdosen)
+                                            <tr class="odd">
+                                                <td class="dtr-control sorting_1" tabindex="0">{{ $i }}</td>
+                                                <td>{{ $usulanpembimbingdosen->nim }}</td>
+                                                <td>{{ $usulanpembimbingdosen->nama }}</td>
+                                                <td>{{ $usulanpembimbingdosen->dosen_pembimbing1 }}</td>
+                                                <td>{{ $usulanpembimbingdosen->dosen_pembimbing2 }}</td>
+                                                <td>{{ $usulanpembimbingdosen->judul }}</td>
+                                                <td class="table-action">
+                                                    <a href="{{ route('usulan_pembimbing.download', ['id' => $usulanpembimbingdosen->id, 'fileType' => 'draf_proposal']) }}">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                                            <polyline points="14 2 14 8 20 8" />
+                                                            <line x1="16" x2="8" y1="13" y2="13" />
+                                                            <line x1="16" x2="8" y1="17" y2="17" />
+                                                            <polyline points="10 9 9 9 8 9" />
+                                                        </svg>
+                                                    </a>
+                                                    <a href="{{ route('usulan_pembimbing.download', ['id' => $usulanpembimbingdosen->id, 'fileType' => 'krs_berjalan']) }}">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                                            <polyline points="14 2 14 8 20 8" />
+                                                            <line x1="16" x2="8" y1="13" y2="13" />
+                                                            <line x1="16" x2="8" y1="17" y2="17" />
+                                                            <polyline points="10 9 9 9 8 9" />
+                                                        </svg>
+                                                    </a>
+                                                    <a href="{{ route('usulan_pembimbing.download', ['id' => $usulanpembimbingdosen->id, 'fileType' => 'form_persetujuan']) }}">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                                            <polyline points="14 2 14 8 20 8" />
+                                                            <line x1="16" x2="8" y1="13" y2="13" />
+                                                            <line x1="16" x2="8" y1="17" y2="17" />
+                                                            <polyline points="10 9 9 9 8 9" />
+                                                        </svg>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <?php $i++ ?>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            {{ $data->links() }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

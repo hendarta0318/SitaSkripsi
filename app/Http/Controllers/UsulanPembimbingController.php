@@ -13,10 +13,11 @@ class UsulanPembimbingController extends Controller
     {
         return view('usulan_pembimbing');
     }
+
     public function store(Request $request)
     {
-        $validate = Validator::make ($request->all(),[
-           'nim' => 'required|string|max:255',
+        $validate = Validator::make($request->all(), [
+            'nim' => 'required|string|max:255',
             'nama' => 'required|string|max:255',
             'judul' => 'required|string|max:255',
             'rumusan_masalah' => 'required|string',
@@ -30,28 +31,64 @@ class UsulanPembimbingController extends Controller
             'no_wa' => 'required|string|max:255',
         ]);
 
-        if($validate->fails()) return redirect()->back()->withInput()->withErrors($validate);
+        if ($validate->fails()) {
+            return redirect()->back()->withInput()->withErrors($validate);
+        }
 
-         $drafProposalPath = $request->file('draf_proposal')->store('usulan_pembimbing');
-        $krsBerjalanPath = $request->file('krs_berjalan')->store('usulan_pembimbing');
-        $formPersetujuanPath = $request->file('form_persetujuan')->store('usulan_pembimbing');
+        try {
+            $drafProposalPath = $request->file('draf_proposal')->store('usulan_pembimbing');
+            $krsBerjalanPath = $request->file('krs_berjalan')->store('usulan_pembimbing');
+            $formPersetujuanPath = $request->file('form_persetujuan')->store('usulan_pembimbing');
 
-        // Buat data baru di database
-         UsulanPembimbing::create([
-            'nim' => $request->nim,
-            'nama' => $request->nama,
-            'judul' => $request->judul,
-            'rumusan_masalah' => $request->rumusan_masalah,
-            'topik1' => $request->topik1,
-            'topik2' => $request->topik2,
-            'dosen_pembimbing1' => $request->dosen_pembimbing1,
-            'dosen_pembimbing2' => $request->dosen_pembimbing2,
-            'draf_proposal' => $drafProposalPath,
-            'krs_berjalan' => $krsBerjalanPath,
-            'form_persetujuan' => $formPersetujuanPath,
-            'no_wa' => $request->no_wa,
-        ]);
+            UsulanPembimbing::create([
+                'nim' => $request->nim,
+                'nama' => $request->nama,
+                'judul' => $request->judul,
+                'rumusan_masalah' => $request->rumusan_masalah,
+                'topik1' => $request->topik1,
+                'topik2' => $request->topik2,
+                'dosen_pembimbing1' => $request->dosen_pembimbing1,
+                'dosen_pembimbing2' => $request->dosen_pembimbing2,
+                'draf_proposal' => $drafProposalPath,
+                'krs_berjalan' => $krsBerjalanPath,
+                'form_persetujuan' => $formPersetujuanPath,
+                'no_wa' => $request->no_wa,
+            ]);
 
-        return redirect()->route('beranda_mahasiswa');
+            return redirect()->route('beranda_mahasiswa');
+
+        } catch (\Exception $e) {
+            return redirect()->back()->withInput()->withErrors(['error' => 'Terjadi kesalahan saat menyimpan data: ' . $e->getMessage()]);
+        }
+    }
+
+    // Fungsi untuk mengunduh file
+    public function downloadFile($id, $fileType)
+    {
+        $usulanPembimbing = UsulanPembimbing::findOrFail($id);
+
+        switch ($fileType) {
+            case 'draf_proposal':
+                $filePath = $usulanPembimbing->draf_proposal;
+                break;
+            case 'krs_berjalan':
+                $filePath = $usulanPembimbing->krs_berjalan;
+                break;
+            case 'form_persetujuan':
+                $filePath = $usulanPembimbing->form_persetujuan;
+                break;
+            default:
+                abort(404);
+        }
+
+        return Storage::download($filePath);
+    }
+
+    public function destroy($id)
+    {
+        $usulanPembimbing = UsulanPembimbing::findOrFail($id);
+        $usulanPembimbing->delete();
+
+        return redirect('beranda_operator')->with('success', 'Usulan Pembimbing berhasil dihapus.');
     }
 }
