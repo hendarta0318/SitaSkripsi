@@ -103,7 +103,7 @@
 								<span class="text-dark">{{ Auth::user()->name }}</span>
               				</a>
 							<div class="dropdown-menu dropdown-menu-end">
-								<a class="dropdown-item" href="{{ route('profile')}}"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+								<a class="dropdown-item" href="{{ route('profile_dosen')}}"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
 								<a class="dropdown-item" href='logout'>
 									<i class="align-middle me-1" data-feather="log-out"></i>Log out
 								</a>
@@ -130,7 +130,7 @@
 
 			<div class="container-fluid" style="
 				margin-left: 20px;">
-				@yield('content-profile')
+				@yield('content-profile_dosen')
 			</div>
 
 		</div>

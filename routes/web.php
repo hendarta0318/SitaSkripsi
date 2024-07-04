@@ -1,7 +1,9 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProfileMahasiswaController;
+use App\Http\Controllers\ProfileDosenController;
+use App\Http\Controllers\ProfileOperatorController;
 // use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\BerandaMahasiswaController;
 use App\Http\Controllers\BerandaDosenController;
@@ -33,7 +35,9 @@ Route::middleware(['auth'])-> group(function(){
     Route::get('beranda_mahasiswa', [BerandaMahasiswaController::class, 'showBerandaMhsForm'])->name('beranda_mahasiswa'); //->middleware(['userAkses:mahasiswa']);
     Route::get('beranda_dosen', [BerandaDosenController::class, 'showBerandaDosenForm'])->name('beranda_dosen'); //->middleware(['userAkses:dosen']);
     Route::get('beranda_operator', [BerandaOperatorController::class, 'showBerandaOperatorForm'])->name('beranda_operator'); //->middleware(['userAkses:operator']);
-    Route::get('profile',[ProfileController::class, 'showProfile'])->name('profile');
+    Route::get('profile_mahasiswa',[ProfileMahasiswaController::class, 'showProfile'])->name('profile_mahasiswa');
+    Route::get('profile_dosen',[ProfileDosenController::class, 'showProfile'])->name('profile_dosen');
+    Route::get('profile_operator',[ProfileOperatorController::class, 'showProfile'])->name('profile_operator');
     Route::get('logout',[LoginController::class, 'logout']);
 
     Route::post('usulan-pembimbing', [UsulanPembimbingController::class, 'store'])->name('usulan-pembimbing.store');

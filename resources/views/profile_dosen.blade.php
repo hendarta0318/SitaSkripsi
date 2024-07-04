@@ -1,6 +1,6 @@
-@extends('app_adminkit_mahasiswa')
+@extends('app_adminkit_dosen')
 
-@section('content-profile')
+@section('content-profile_dosen')
 <div class="d-flex justify-content-center align-items-center">
     <div class="mt-5 row" style="width: 500px; height: 400px;">
         <div class="col-md-12">

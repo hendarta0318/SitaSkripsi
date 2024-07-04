@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
-class ProfileController extends Controller
+class ProfileOperatorController extends Controller
 {
     public function showProfile()
     {
         $user = Auth::user();
-        return view('profile', compact('user'));
+        return view('profile_operator', compact('user'));
     }
 }
